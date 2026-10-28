@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>لوحة إدارة خبير صيانة الهواتف</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f7f8;--card:#fff;--ink:#14272e;--line:#d5e0e4;--pri:#0b5c70}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1b20;--card:#16282f;--ink:#e6f0f3;--line:#2a424b;--pri:#6cc4da}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Tahoma,"Segoe UI",sans-serif;padding:16px;max-width:960px;margin-inline:auto}
+.c{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+input,select,textarea,button{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+button{cursor:pointer}button.p{background:var(--pri);color:#fff;border:0}
+label{display:block;margin:6px 0}textarea,input[type=text],input[type=email],input[type=password]{width:100%}
+table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:start}
+.m{color:#9a6200}.err{color:#b3261e}
+</style></head><body>
+<h1>لوحة الإدارة</h1><div id="v"></div>
+<script>
+"use strict";
+const v=document.getElementById("v");
+const esc=s=>String(s??"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+async function api(m,p,b){const r=await fetch("/api/admin/"+p,{method:m,headers:{"content-type":"application/json","x-requested-with":"fetch"},body:b?JSON.stringify(b):undefined});let d={};try{d=await r.json()}catch(_){}if(!r.ok)throw Object.assign(new Error(d.error||"خطأ"),{status:r.status});return d}
+const COLS={brands:["name"],models:["brand","name","model_number","os_versions","region","notes"],issues:["title","symptoms","steps","stop_when","risk","brand","os_versions"],codes:["code","purpose","brand","models","os_versions","compat","risk","category","expected_output","notes"],commands:["command","purpose","requirements","compat","risk","expected_output","notes"],sources:["title","url","kind"]};
+const COMMON=["source_ids","last_verified"];
+let me=null;
+function login(msg){v.innerHTML=`<div class="c"><p>سجّل الدخول. الحسابات تُنشأ من الخادم فقط.</p><label>البريد<input id="e" type="email" autocomplete="username"></label><label>كلمة المرور<input id="p" type="password" autocomplete="current-password"></label><button class="p" id="b">دخول</button> <span class="err">${esc(msg||"")}</span></div>`;
+ document.getElementById("b").onclick=async()=>{try{me=await api("POST","login",{email:document.getElementById("e").value,password:document.getElementById("p").value});home()}catch(x){login(x.message)}}}
+async function home(){
+ const ov=await api("GET","overview");
+ v.innerHTML=`<div class="c">المستخدم: ${esc(me.email)} (${esc(me.role)}) <button id="lo">خروج</button></div>
+ <div class="c"><b>فجوات التغطية:</b> منشور وموثّق: موديلات ${ov.verified_published.models}، أعطال ${ov.verified_published.issues}، أكواد ${ov.verified_published.codes}. اقتراحات معلّقة: ${ov.pending_suggestions}. شركات بلا موديلات: ${esc(ov.brands_without_models.join("، ")||"لا يوجد")}</div>
+ <div class="c" id="nav">${[...Object.keys(COLS),"suggestions","users"].map(t=>`<button data-t="${t}">${t}</button>`).join(" ")}</div><div id="w"></div>`;
+ document.getElementById("lo").onclick=async()=>{try{await api("POST","logout",{});}finally{me=null;login()}};
+ document.getElementById("nav").onclick=e=>{const t=e.target.dataset&&e.target.dataset.t;if(t)(t==="suggestions"?sug:t==="users"?usr:tab)(t)};
+}
+const w=()=>document.getElementById("w");
+async function tab(t,edit){
+ const rows=await api("GET",t);const f=[...COLS[t],"status","data_level",...COMMON];
+ const row=edit&&rows.find(r=>r.id===edit)||{};
+ w().innerHTML=`<div class="c"><h3>${t}: ${edit?"تعديل #"+edit:"إضافة"}</h3>
+ ${COLS[t].map(c=>`<label>${c}<textarea data-f="${c}" rows="2">${esc(row[c])}</textarea></label>`).join("")}
+ <label>status<select data-f="status"><option>draft</option><option ${row.status==="published"?"selected":""}>published</option></select></label>
+ <label>data_level<select data-f="data_level">${["sample","unverified","verified"].map(x=>`<option ${row.data_level===x?"selected":""}>${x}</option>`).join("")}</select></label>
+ ${COMMON.map(c=>`<label>${c}<input type="text" data-f="${c}" value="${esc(row[c])}"></label>`).join("")}
+ <p class="m">«موثّق» يتطلب source_ids (أرقام من جدول sources) وlast_verified بصيغة YYYY-MM-DD. النشر للمدير فقط.</p>
+ <button class="p" id="sv">حفظ</button> <span id="ms" class="err"></span></div>
+ <div class="c"><table><tr><th>#</th><th>${COLS[t][0]}</th><th>الحالة</th><th>التوثيق</th><th></th></tr>${rows.map(r=>`<tr><td>${r.id}</td><td>${esc(r[COLS[t][0]])}</td><td>${esc(r.status)}</td><td>${esc(r.data_level)}</td><td><button data-ed="${r.id}">تعديل</button> <button data-del="${r.id}">حذف</button></td></tr>`).join("")}</table></div>`;
+ document.getElementById("sv").onclick=async()=>{const b={};w().querySelectorAll("[data-f]").forEach(x=>b[x.dataset.f]=x.value);try{edit?await api("PUT",t+"/"+edit,b):await api("POST",t,b);tab(t)}catch(x){document.getElementById("ms").textContent=x.message}};
+ w().querySelectorAll("[data-ed]").forEach(b=>b.onclick=()=>tab(t,+b.dataset.ed));
+ w().querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(confirm("حذف نهائي؟")){try{await api("DELETE",t+"/"+b.dataset.del);tab(t)}catch(x){alert(x.message)}}});
+}
+async function sug(){
+ const rows=await api("GET","suggestions");
+ w().innerHTML=`<div class="c"><h3>اقتراح جديد (من الذكاء الاصطناعي أو يدوي)</h3><label>الجدول<select id="st">${Object.keys(COLS).map(x=>`<option>${x}</option>`)}</select></label><label>المصدر<select id="so"><option value="ai">ai</option><option value="manual">manual</option></select></label><label>الحمولة (JSON)<textarea id="sp" rows="4">{}</textarea></label><label>الأدلة والمراجع<textarea id="se" rows="3"></textarea></label><button class="p" id="sa">أضف للمراجعة</button> <span id="sm" class="err"></span></div>
+ <div class="c"><h3>قائمة المراجعة</h3>${rows.map(r=>`<div class="c"><b>#${r.id} ${esc(r.table_name)}</b> [${esc(r.origin)}] ${esc(r.status)}<pre style="white-space:pre-wrap">${esc(r.payload)}</pre><p>الأدلة: ${esc(r.evidence)}</p>${r.status==="pending"?`<label><input type="checkbox" id="rv${r.id}"> راجعتُ الأدلة والمصدر بنفسي</label><button data-ap="${r.id}">اعتماد ونشر</button> <button data-rj="${r.id}">رفض</button>`:""}</div>`).join("")||"لا اقتراحات"}</div>`;
+ document.getElementById("sa").onclick=async()=>{try{await api("POST","suggestions",{table:document.getElementById("st").value,origin:document.getElementById("so").value,payload:JSON.parse(document.getElementById("sp").value),evidence:document.getElementById("se").value});sug()}catch(x){document.getElementById("sm").textContent=x.message}};
+ w().querySelectorAll("[data-ap]").forEach(b=>b.onclick=async()=>{try{await api("POST","suggestions/"+b.dataset.ap+"/decide",{approve:true,reviewed:document.getElementById("rv"+b.dataset.ap).checked});sug()}catch(x){alert(x.message)}});
+ w().querySelectorAll("[data-rj]").forEach(b=>b.onclick=async()=>{try{await api("POST","suggestions/"+b.dataset.rj+"/decide",{approve:false});sug()}catch(x){alert(x.message)}});
+}
+function usr(){w().innerHTML=`<div class="c"><h3>مستخدم جديد (للمدير)</h3><label>البريد<input id="ue" type="email"></label><label>كلمة المرور (12+ حرفًا)<input id="up" type="password" autocomplete="new-password"></label><label>الدور<select id="ur"><option>editor</option><option>admin</option></select></label><button class="p" id="ub">إنشاء</button> <span id="um" class="err"></span></div>`;
+ document.getElementById("ub").onclick=async()=>{try{await api("POST","users",{email:document.getElementById("ue").value,password:document.getElementById("up").value,role:document.getElementById("ur").value});document.getElementById("um").textContent="تم"}catch(x){document.getElementById("um").textContent=x.message}}}
+(async()=>{try{me=await api("GET","me");home()}catch(_){login()}})();
+</script></body></html>

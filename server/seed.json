@@ -1,0 +1,1209 @@
+{
+  "sources": [
+    {
+      "key": "adb",
+      "title": "وثائق ADB الرسمية",
+      "url": "https://developer.android.com/tools/adb",
+      "kind": "official"
+    },
+    {
+      "key": "pt",
+      "title": "أدوات المنصة (Platform-Tools) الرسمية",
+      "url": "https://developer.android.com/tools/releases/platform-tools",
+      "kind": "official"
+    },
+    {
+      "key": "dev",
+      "title": "خيارات المطور وتصحيح USB",
+      "url": "https://developer.android.com/studio/debug/dev-options",
+      "kind": "official"
+    },
+    {
+      "key": "safe",
+      "title": "الوضع الآمن في Android (دعم Google)",
+      "url": "https://support.google.com/android/answer/2844832",
+      "kind": "official"
+    },
+    {
+      "key": "gacc",
+      "title": "استرداد حساب Google",
+      "url": "https://support.google.com/accounts/answer/7682439",
+      "kind": "official"
+    },
+    {
+      "key": "aacc",
+      "title": "استرداد حساب Apple (iForgot)",
+      "url": "https://iforgot.apple.com",
+      "kind": "official"
+    },
+    {
+      "key": "aipho",
+      "title": "دعم iPhone الرسمي من Apple",
+      "url": "https://support.apple.com/iphone",
+      "kind": "official"
+    },
+    {
+      "key": "icl",
+      "title": "دعم iCloud من Apple",
+      "url": "https://support.apple.com/icloud",
+      "kind": "official"
+    },
+    {
+      "key": "gph",
+      "title": "مساعدة صور Google",
+      "url": "https://support.google.com/photos",
+      "kind": "official"
+    },
+    {
+      "key": "gand",
+      "title": "مساعدة Android من Google",
+      "url": "https://support.google.com/android",
+      "kind": "official"
+    },
+    {
+      "key": "sam",
+      "title": "دعم Samsung",
+      "url": "https://www.samsung.com/support/",
+      "kind": "official"
+    },
+    {
+      "key": "mmi",
+      "title": "توثيق رموز MMI (oFono استنادًا إلى 3GPP TS 22.030)",
+      "url": "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+      "kind": "official"
+    },
+    {
+      "key": "gpp",
+      "title": "قائمة مواصفات 3GPP السلسلة 22 (تتضمن TS 22.030)",
+      "url": "https://www.3gpp.org/DynaReport/22-series.htm",
+      "kind": "official"
+    },
+    {
+      "key": "fdroid",
+      "title": "F-Droid: تطبيق Service Menu (مصدر ثانوي)",
+      "url": "https://f-droid.org/packages/sony.hidden.servicemenu",
+      "kind": "secondary"
+    },
+    {
+      "key": "pa",
+      "title": "PhoneArena: قائمة Testing المخفية (مصدر ثانوي)",
+      "url": "https://www.phonearena.com/news/How-to-access-your-Android-phones-hidden-Testing-menu_id73160",
+      "kind": "secondary"
+    },
+    {
+      "key": "xiaomi_support",
+      "title": "دعم Xiaomi الرسمي (مرجع الشركة؛ لا يوثق كل كود مخفي)",
+      "url": "https://www.mi.com/global/support/",
+      "kind": "official"
+    },
+    {
+      "key": "android_dev",
+      "title": "وثائق Android الرسمية",
+      "url": "https://developer.android.com/",
+      "kind": "official"
+    },
+    {
+      "key": "dialer_secondary",
+      "title": "مرجع ثانوي لأكواد Android المخفية؛ يلزم التحقق حسب الموديل",
+      "url": "https://www.androidauthority.com/hidden-android-settings-869482/",
+      "kind": "secondary"
+    },
+    {
+      "key": "pixel_support",
+      "title": "دعم هواتف Google Pixel الرسمي",
+      "url": "https://support.google.com/pixelphone/",
+      "kind": "official"
+    },
+    {
+      "key": "oneplus_support",
+      "title": "دعم OnePlus الرسمي",
+      "url": "https://service.oneplus.com/",
+      "kind": "official"
+    },
+    {
+      "key": "oppo_support",
+      "title": "دعم OPPO الرسمي",
+      "url": "https://support.oppo.com/",
+      "kind": "official"
+    },
+    {
+      "key": "huawei_support",
+      "title": "دعم Huawei الرسمي",
+      "url": "https://consumer.huawei.com/en/support/",
+      "kind": "official"
+    },
+    {
+      "key": "etsi_mmi",
+      "title": "مواصفة ETSI/3GPP TS 22.030 الرسمية لأكواد MMI",
+      "url": "https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf",
+      "kind": "official"
+    },
+    {
+      "key": "adbref",
+      "title": "مرجع أوامر ADB الرسمي من Android Developers",
+      "url": "https://developer.android.com/tools/adb",
+      "kind": "official"
+    },
+    {
+      "key": "fastbootref",
+      "title": "مرجع Platform-Tools الرسمي (ADB وFastboot)",
+      "url": "https://developer.android.com/tools/releases/platform-tools",
+      "kind": "official"
+    },
+    {
+      "key": "devoptions",
+      "title": "تفعيل خيارات المطور وتصحيح USB رسميًا",
+      "url": "https://developer.android.com/studio/debug/dev-options",
+      "kind": "official"
+    },
+    {
+      "key": "bugreport",
+      "title": "توثيق تقارير الأخطاء في Android",
+      "url": "https://developer.android.com/studio/debug/bug-report",
+      "kind": "official"
+    }
+  ],
+  "commands": [
+    {
+      "command": "adb devices",
+      "purpose": "يعرض الأجهزة المتصلة وحالتها.",
+      "risk": "low",
+      "expected_output": "device = جاهز. unauthorized = وافق على نافذة السماح في الهاتف. قائمة فارغة = مشكلة كابل/تعريف.",
+      "compat": "Android فقط",
+      "requirements": "تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.build.version.release",
+      "purpose": "يعرض إصدار Android.",
+      "risk": "low",
+      "expected_output": "رقم الإصدار مثل 14 (القيمة تعتمد على جهازك).",
+      "compat": "Android فقط",
+      "requirements": "تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys battery",
+      "purpose": "حالة البطارية الحالية (مستوى، حرارة، شحن).",
+      "risk": "low",
+      "expected_output": "قد تُعرض الحرارة بعُشر درجة. لا يعطي سعة فعلية دقيقة.",
+      "compat": "Android فقط",
+      "requirements": "تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb logcat -d",
+      "purpose": "يطبع سجل النظام الحالي ثم ينتهي. الصق جزءًا منه في «تحليل السجل».",
+      "risk": "low",
+      "expected_output": "آلاف الأسطر؛ ابحث عن FATAL EXCEPTION وANR.",
+      "compat": "Android فقط",
+      "requirements": "تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb reboot recovery",
+      "purpose": "يعيد التشغيل إلى Recovery.",
+      "risk": "mid",
+      "expected_output": "قد لا يعمل على كل الأجهزة. لا تختر مسحًا من القائمة دون قرار صريح.",
+      "compat": "Android فقط",
+      "requirements": "تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "fastboot devices",
+      "purpose": "يعرض أجهزة في وضع Fastboot.",
+      "risk": "low",
+      "expected_output": "قائمة فارغة: الجهاز ليس في Fastboot أو التعريف ناقص.",
+      "compat": "Android، وضع Fastboot",
+      "requirements": "Fastboot وتعريفات USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/releases/platform-tools"
+      ]
+    },
+    {
+      "command": "fastboot getvar all",
+      "purpose": "يقرأ متغيرات الجهاز (للقراءة فقط). الإخراج يختلف بحسب الشركة.",
+      "risk": "low",
+      "expected_output": "قد يتضمن معلومات حساسة مثل الرقم التسلسلي؛ لا تنشره علنًا.",
+      "compat": "Android، وضع Fastboot",
+      "requirements": "Fastboot وتعريفات USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/releases/platform-tools"
+      ]
+    },
+    {
+      "command": "fastboot flashing unlock",
+      "purpose": "للتعريف والتحذير فقط. يفتح Bootloader.",
+      "risk": "high",
+      "expected_output": "يمسح بيانات الجهاز عادة ويضعف الحماية وقد يلغي الضمان. لا تنفذه بدون فهم كامل ونسخة احتياطية.",
+      "compat": "Android، وضع Fastboot",
+      "requirements": "Fastboot وتعريفات USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/releases/platform-tools"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.product.manufacturer",
+      "purpose": "قراءة اسم الشركة المصنّعة كما يبلّغ عنه النظام.",
+      "risk": "low",
+      "expected_output": "اسم الشركة أو قيمة فارغة حسب الجهاز/الروم.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "قيمة النظام ليست وحدها إثباتًا لهوية الجهاز؛ قارنها برقم الطراز والملصق/الإعدادات.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell getprop ro.product.model",
+      "purpose": "قراءة اسم/معرّف الطراز الذي يبلّغ عنه النظام.",
+      "risk": "low",
+      "expected_output": "اسم طراز أو معرّف داخلي؛ قد يختلف عن SKU الإقليمي.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "لا تستخدم هذا وحده لاختيار firmware؛ طابق رقم الطراز الكامل والمنطقة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell getprop ro.build.version.sdk",
+      "purpose": "عرض مستوى API الخاص بإصدار Android.",
+      "risk": "low",
+      "expected_output": "عدد صحيح مثل 34 أو 35؛ القيمة تختلف حسب إصدار النظام.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "هذا رقم API وليس رقم إصدار Android التسويقي.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell wm size",
+      "purpose": "قراءة دقة العرض الحالية التي يستخدمها Android.",
+      "risk": "low",
+      "expected_output": "Physical size وقد يظهر Override size إن وُجد تغيير يدوي.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "للقراءة فقط؛ لا تستخدم wm size مع أرقام تغيير إلا إذا كنت تقصد تعديل الدقة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell wm density",
+      "purpose": "قراءة كثافة العرض الحالية.",
+      "risk": "low",
+      "expected_output": "Physical density وقد يظهر Override density.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "للقراءة فقط؛ تغيير الكثافة بأمر wm density قد يجعل الواجهة صعبة الاستخدام.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell df -h /data",
+      "purpose": "فحص المساحة المتاحة في قسم بيانات المستخدم.",
+      "risk": "low",
+      "expected_output": "جدول الحجم والمستخدم والمتاح؛ قد يختلف تنسيق df حسب النظام.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "قراءة فقط؛ المساحة المحجوزة للنظام قد تجعل الأرقام لا تطابق مساحة التخزين المعلنة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell pm list packages -3",
+      "purpose": "عرض حزم التطبيقات المثبتة من المستخدم غالبًا.",
+      "risk": "low",
+      "expected_output": "قائمة أسماء حزم تبدأ عادةً بـ package:.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "قد تكشف القائمة تطبيقاتك عند مشاركة المخرجات؛ راجعها قبل نشرها.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell dumpsys meminfo",
+      "purpose": "عرض ملخص استخدام الذاكرة للعمليات والنظام.",
+      "risk": "low",
+      "expected_output": "معلومات ذاكرة طويلة؛ تختلف التفاصيل بين إصدارات Android.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "لقطة لحظية وليست اختبارًا نهائيًا لصحة الذاكرة أو تشخيصًا وحيدًا لبطء الهاتف.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell dumpsys power",
+      "purpose": "قراءة حالة إدارة الطاقة التي يعرضها النظام.",
+      "risk": "low",
+      "expected_output": "تفاصيل حالة الطاقة والشاشة والاستيقاظ؛ المخرجات تختلف حسب الجهاز.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "قد تتضمن المخرجات تفاصيل تشغيلية؛ احذف المعلومات الخاصة قبل مشاركتها.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb logcat -b crash -d",
+      "purpose": "استخراج سجل الأعطال المتاح ثم إنهاء الأمر.",
+      "risk": "low",
+      "expected_output": "قد يعرض آثار أعطال أو لا يعرض شيئًا إذا لم توجد سجلات متاحة.",
+      "compat": "Android؛ قد تختلف صلاحية الوصول",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb",
+        "https://developer.android.com/studio/debug/bug-report"
+      ],
+      "notes": "السجلات قد تحتوي أسماء حزم أو معلومات شخصية؛ لا ترفعها علنًا دون مراجعة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb bugreport",
+      "purpose": "إنشاء تقرير تشخيص شامل للمساعدة في تحليل الأعطال.",
+      "risk": "low",
+      "expected_output": "يجمع تقريرًا وقد يستغرق وقتًا؛ غالبًا يُحفظ في المسار الذي تحدده الأداة أو الجهاز المضيف.",
+      "compat": "Android؛ يعتمد على الإصدار والأذونات",
+      "requirements": "ADB؛ مساحة تخزين على الكمبيوتر",
+      "source_urls": [
+        "https://developer.android.com/studio/debug/bug-report"
+      ],
+      "notes": "التقرير قد يحتوي بيانات حساسة جدًا مثل سجلات وإشعارات ومعلومات اتصال. افحصه ونقّحه قبل إرساله لأي جهة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell am force-stop PACKAGE_NAME",
+      "purpose": "إيقاف تطبيق محدد بالقوة لاستكشاف مشكلة تجمده؛ استبدل PACKAGE_NAME بمعرّف الحزمة الصحيح.",
+      "risk": "mid",
+      "expected_output": "عادةً لا يظهر إخراج عند النجاح؛ قد يُغلق التطبيق وتضيع بيانات غير محفوظة داخله.",
+      "compat": "Android؛ قد تمنع بعض سياسات النظام الأمر",
+      "requirements": "ADB؛ معرفة اسم الحزمة",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "لا تكتب PACKAGE_NAME حرفيًا. لا تستخدمه لإيقاف تطبيقات النظام عشوائيًا.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb reboot",
+      "purpose": "إعادة تشغيل الهاتف المتصل.",
+      "risk": "mid",
+      "expected_output": "ينقطع اتصال ADB أثناء إعادة التشغيل ثم يعود عند إقلاع الجهاز وتفعيل التصحيح.",
+      "compat": "Android",
+      "requirements": "ADB؛ تصحيح USB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "احفظ عملك أولًا؛ قد لا يكون مناسبًا أثناء تحديث أو كتابة بيانات مهمة.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb install app.apk",
+      "purpose": "تثبيت ملف APK محلي على الجهاز لأغراض الصيانة/الاختبار.",
+      "risk": "mid",
+      "expected_output": "Success عند النجاح أو رسالة خطأ عند عدم التوافق أو رفض التثبيت.",
+      "compat": "Android؛ لا يضمن التوافق مع كل الأجهزة",
+      "requirements": "ملف APK موثوق على الكمبيوتر؛ ADB وموافقة الهاتف",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "استبدل app.apk بمسار الملف الصحيح. ثبّت التطبيقات من مصادر موثوقة فقط؛ قد يفشل بسبب التوقيع أو إصدار النظام أو سياسات الجهاز.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell pm clear PACKAGE_NAME",
+      "purpose": "مسح بيانات تطبيق محدد وإرجاعه لحالة قريبة من التثبيت الأول.",
+      "risk": "high",
+      "expected_output": "قد تظهر Success عند النجاح؛ تُحذف بيانات التطبيق المحلية وإعداداته وقد تفقد ملفات غير متزامنة.",
+      "compat": "Android؛ يعتمد على الصلاحيات وسياسات الجهاز",
+      "requirements": "ADB؛ معرفة اسم الحزمة وموافقة صريحة من مالك الجهاز",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ],
+      "notes": "إجراء مدمّر لبيانات التطبيق. لا تنفذه إلا بعد النسخ الاحتياطي والتأكد من الحزمة؛ لا يزيل عادةً التطبيق نفسه.",
+      "data_level": "sample"
+    },
+    {
+      "command": "fastboot getvar product",
+      "purpose": "قراءة اسم المنتج الذي يبلّغ عنه محمّل الإقلاع.",
+      "risk": "low",
+      "expected_output": "قد يظهر product: معرّف داخلي، أو قد لا يدعم الجهاز هذا المتغير.",
+      "compat": "أجهزة Android التي تدعم Fastboot",
+      "requirements": "الجهاز في وضع Fastboot؛ Platform-Tools وتعريفات USB",
+      "source_urls": [
+        "https://developer.android.com/tools/releases/platform-tools"
+      ],
+      "notes": "لا يكفي هذا وحده لاختيار صورة نظام؛ طابق رقم الطراز والمنطقة ومصدر الشركة الرسمي.",
+      "data_level": "sample"
+    },
+    {
+      "command": "fastboot reboot",
+      "purpose": "إعادة تشغيل الجهاز من وضع Fastboot إلى النظام عادةً.",
+      "risk": "mid",
+      "expected_output": "يعيد الجهاز التشغيل إذا كان الأمر مدعومًا والاتصال سليمًا.",
+      "compat": "أجهزة تدعم Fastboot؛ تختلف سلوكيات الشركات",
+      "requirements": "وضع Fastboot؛ Platform-Tools وتعريفات USB",
+      "source_urls": [
+        "https://developer.android.com/tools/releases/platform-tools"
+      ],
+      "notes": "لا تستخدمه أثناء عملية تفليش جارية. لا يصلح وحده مشكلة تلف النظام.",
+      "data_level": "sample"
+    },
+    {
+      "command": "adb shell dumpsys connectivity",
+      "purpose": "قراءة حالة اتصالات الشبكة التي يراها Android.",
+      "risk": "low",
+      "expected_output": "يعرض شبكات وواجهات اتصال وحالاتها؛ تختلف التفاصيل وقد تتضمن معرفات خاصة.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys wifi",
+      "purpose": "قراءة حالة Wi‑Fi وتشخيصها بصورة أولية.",
+      "risk": "low",
+      "expected_output": "قد تظهر حالة Wi‑Fi والشبكات؛ قد تكون بعض التفاصيل محجوبة حسب الإصدار. أخفِ أسماء الشبكات والمعرفات قبل المشاركة.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys thermalservice",
+      "purpose": "قراءة معلومات خدمة الحرارة إذا كانت متاحة.",
+      "risk": "low",
+      "expected_output": "قد يعرض مستويات حرارية أو لا تتوفر الخدمة. القراءة لقطة لحظية وليست قياسًا طبيًا أو حكمًا نهائيًا على البطارية.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.boot.verifiedbootstate",
+      "purpose": "قراءة حالة Verified Boot التي يبلّغ عنها النظام.",
+      "risk": "low",
+      "expected_output": "قد تكون القيمة green/orange/yellow أو فارغة بحسب الجهاز. لا تستخدمها وحدها لإثبات سلامة النظام.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.boot.flash.locked",
+      "purpose": "قراءة خاصية قفل محمّل الإقلاع إذا كانت متاحة.",
+      "risk": "low",
+      "expected_output": "قد تظهر 1 أو 0 أو قيمة فارغة؛ تختلف الدلالة حسب الشركة. لا تحاول تغييرها عبر أوامر غير موثوقة.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell settings get global airplane_mode_on",
+      "purpose": "قراءة قيمة وضع الطيران من إعدادات النظام.",
+      "risk": "low",
+      "expected_output": "غالبًا 1 مفعّل و0 غير مفعّل؛ قد تختلف الإتاحة أو القيمة على بعض الإصدارات.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell settings get global boot_count",
+      "purpose": "قراءة عداد مرات الإقلاع إن كان متاحًا.",
+      "risk": "low",
+      "expected_output": "قد يظهر رقم أو null/قيمة فارغة بحسب الإصدار والصلاحيات. ليس سجلًا كاملًا للأعطال.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell pm list packages -d",
+      "purpose": "عرض الحزم المعطّلة التي يستطيع النظام إظهارها.",
+      "risk": "low",
+      "expected_output": "قد تظهر قائمة package: أو تكون فارغة. لا تفعّل أو تعطل حزم النظام عشوائيًا.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell pm path PACKAGE_NAME",
+      "purpose": "عرض مسار APK لحزمة محددة. استبدل PACKAGE_NAME باسم الحزمة الفعلي.",
+      "risk": "low",
+      "expected_output": "قد يظهر package:/... أو خطأ إذا كانت الحزمة غير موجودة/غير مرئية.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys package PACKAGE_NAME",
+      "purpose": "عرض تفاصيل حزمة تطبيق محدد. استبدل PACKAGE_NAME باسم الحزمة الفعلي.",
+      "risk": "low",
+      "expected_output": "مخرجات طويلة؛ راجع اسم الحزمة بدقة ونقّح المعرفات قبل مشاركة النص.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.HOME",
+      "purpose": "تحديد نشاط الشاشة الرئيسية الذي يحله النظام.",
+      "risk": "low",
+      "expected_output": "قد يظهر اسم مكوّن أو لا تُرجع بعض الإصدارات نتيجة. لا يغيّر إعداد الشاشة الرئيسية.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.product.cpu.abi",
+      "purpose": "قراءة معمارية ABI الأساسية التي يبلّغ عنها النظام.",
+      "risk": "low",
+      "expected_output": "قد تظهر قيمة مثل arm64-v8a؛ لا تكفي وحدها لاختيار أي ملف APK دون التحقق من متطلبات التطبيق.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell getprop ro.build.fingerprint",
+      "purpose": "قراءة بصمة بناء النظام للمساعدة في التعرف على نسخة البرنامج.",
+      "risk": "low",
+      "expected_output": "سطر طويل وقد يكشف معلومات إصدار/بناء الجهاز؛ لا تستخدمه وحده لاختيار Firmware.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys activity activities",
+      "purpose": "عرض ملخص الأنشطة/المهام الحالية.",
+      "risk": "low",
+      "expected_output": "المخرجات تختلف وقد تحتوي أسماء تطبيقات أو معلومات جلسة؛ شارك الحد الأدنى اللازم فقط.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    },
+    {
+      "command": "adb shell dumpsys diskstats",
+      "purpose": "عرض إحصاءات تخزين يوفّرها النظام إن كانت متاحة.",
+      "risk": "low",
+      "expected_output": "قد تظهر إحصاءات أو تكون الخدمة غير متاحة؛ لا يساوي هذا فحصًا لصحة ذاكرة التخزين المادية.",
+      "compat": "Android فقط؛ قد يختلف حسب الشركة وإصدار النظام",
+      "requirements": "Android مع تصحيح USB",
+      "data_level": "sample",
+      "source_urls": [
+        "https://developer.android.com/tools/adb"
+      ]
+    }
+  ],
+  "codes": [
+    {
+      "code": "*#06#",
+      "purpose": "يعرض رقم IMEI للهاتف.",
+      "compat": "شائع على معظم الهواتف، ولم أتحقق منه مباشرة من مصدر في هذه الجلسة.",
+      "risk": "low",
+      "category": "معلومات الجهاز",
+      "expected_output": "يظهر رقم IMEI على الشاشة (أو رقمان في الهواتف ثنائية الشريحة).",
+      "notes": "للتحقق الرسمي من IMEI استخدم مشغّل الاتصال أو الشركة المصنّعة.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": []
+    },
+    {
+      "code": "*#*#4636#*#*",
+      "purpose": "يفتح قائمة «Testing» المخفية: معلومات الهاتف، معلومات البطارية، إحصاءات الاستخدام، ومعلومات Wi-Fi.",
+      "compat": "يعمل على بعض أجهزة Android فقط؛ قد لا يعمل بحسب الشركة المصنّعة أو المشغّل أو إصدار النظام أو تطبيق الاتصال. جرّب تطبيق الاتصال الافتراضي.",
+      "risk": "mid",
+      "category": "اختبار وتشخيص",
+      "expected_output": "تظهر قائمة بأربعة أقسام فرعية.",
+      "notes": "إيقاف الراديو من قائمة معلومات الهاتف يقطع المكالمات والرسائل والبيانات حتى تعيد تشغيله. لا تغيّر شيئًا لا تفهمه. المصدران ثانويان وليسا توثيقًا رسميًا من Google.",
+      "data_level": "unverified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://www.phonearena.com/news/How-to-access-your-Android-phones-hidden-Testing-menu_id73160",
+        "https://f-droid.org/packages/sony.hidden.servicemenu"
+      ]
+    },
+    {
+      "code": "*#*#7378423#*#*",
+      "purpose": "يفتح قائمة الخدمة المخفية في أجهزة Sony.",
+      "compat": "أجهزة Sony Xperia فقط بحسب المصدر. قد يختلف أو لا يعمل على موديلات وإصدارات أحدث.",
+      "risk": "mid",
+      "category": "اختبار وتشخيص",
+      "expected_output": "تظهر قائمة خدمة تحتوي أقسام اختبار ومعلومات.",
+      "notes": "قائمة خدمة؛ لا تغيّر إعداداتها دون فهم. المصدر ثانوي.",
+      "data_level": "unverified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://f-droid.org/packages/sony.hidden.servicemenu"
+      ]
+    },
+    {
+      "code": "*#21#",
+      "purpose": "استعلام فقط: يعرض حالة تحويل المكالمات غير المشروط (CFU).",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#67#",
+      "purpose": "استعلام فقط: يعرض حالة التحويل عند الانشغال.",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#61#",
+      "purpose": "استعلام فقط: يعرض حالة التحويل عند عدم الرد.",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#62#",
+      "purpose": "استعلام فقط: يعرض حالة التحويل عند عدم التوفر أو خارج التغطية.",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#43#",
+      "purpose": "استعلام فقط: يعرض حالة انتظار المكالمات.",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#30#",
+      "purpose": "استعلام فقط: يعرض حالة عرض رقم المتصل (CLIP).",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#31#",
+      "purpose": "استعلام فقط: يعرض حالة إخفاء رقمك عن المتصَل به (CLIR).",
+      "compat": "مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.",
+      "risk": "low",
+      "category": "خدمات الشبكة (مواصفة 3GPP)",
+      "expected_output": "رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).",
+      "notes": "هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt",
+        "https://www.3gpp.org/DynaReport/22-series.htm"
+      ]
+    },
+    {
+      "code": "*#0*#",
+      "purpose": "قد يفتح قائمة اختبارات الأجهزة في بعض هواتف Samsung Galaxy (مثل الشاشة واللمس والمستشعرات).",
+      "compat": "بعض موديلات Samsung Galaxy فقط؛ يعتمد على الطراز والمنطقة وإصدار النظام والمشغّل، وقد يكون معطّلًا.",
+      "risk": "mid",
+      "category": "اختبارات الأجهزة",
+      "expected_output": "قد تظهر شبكة اختبارات للشاشة واللمس والمستشعرات؛ لا تختبر إلا ما تفهمه.",
+      "notes": "مرجع ثانوي؛ لم أجد توثيقًا رسميًا عامًا من Samsung يؤكد التوافق مع جميع الموديلات. لا يُعد اختبارًا شاملًا لكل عطل.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/",
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "code": "*#1234#",
+      "purpose": "قد يعرض إصدارات AP/CP/CSC (معلومات البرنامج) في بعض هواتف Samsung.",
+      "compat": "بعض أجهزة Samsung فقط؛ قد لا يعمل في الموديلات أو البرامج الحديثة أو بعض المناطق.",
+      "risk": "low",
+      "category": "معلومات النظام",
+      "expected_output": "قد تظهر إصدارات برمجية مثل AP وCP وCSC.",
+      "notes": "معلومة متداولة بمصادر ثانوية وليست موثقة رسميًا لكل الأجهزة. لا تغيّر أي إعداد بناءً على النتيجة وحدها.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/",
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "code": "*#*#6484#*#*",
+      "purpose": "قد يفتح قائمة CIT/اختبارات العتاد في بعض أجهزة Xiaomi وRedmi وPOCO.",
+      "compat": "بعض الأجهزة فقط؛ قد تختلف الأكواد حسب الطراز والمنطقة وإصدار MIUI/HyperOS.",
+      "risk": "mid",
+      "category": "اختبارات الأجهزة",
+      "expected_output": "قد تظهر قائمة اختبارات تشخيصية. توفرها ومحتوياتها تختلف بين الأجهزة.",
+      "notes": "غير موثق رسميًا لكل الموديلات؛ استخدمه للعرض فقط ولا تغيّر خيارات غير مفهومة.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/",
+        "https://www.mi.com/global/support/"
+      ]
+    },
+    {
+      "code": "*#*#426#*#*",
+      "purpose": "قد يفتح شاشة تشخيص لخدمات Google Play (مثل حالة الاتصال/الأحداث) على بعض أجهزة Android.",
+      "compat": "يتوقف على وجود خدمات Google Play وإصدارها وتطبيق الاتصال؛ قد لا يعمل في كل الأجهزة أو المناطق.",
+      "risk": "low",
+      "category": "تشخيص الخدمات",
+      "expected_output": "قد تظهر معلومات تشخيصية لخدمات Google Play أو لا يحدث شيء.",
+      "notes": "مرجع ثانوي فقط؛ لا يُعد أداة رسمية عامة لفحص الهاتف، ولا تغيّر إعدادات لا تفهمها.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/",
+        "https://developer.android.com/"
+      ]
+    },
+    {
+      "code": "*#*#225#*#*",
+      "purpose": "قد يعرض معلومات تخزين/مزامنة تقويم Android على بعض الأجهزة التي تتضمن المكوّنات المناسبة.",
+      "compat": "غير مضمون؛ يعتمد على إصدار Android وتطبيقات النظام المثبتة وتطبيق الاتصال.",
+      "risk": "low",
+      "category": "معلومات التطبيقات",
+      "expected_output": "قد تظهر معلومات مرتبطة بتقويم الجهاز، أو لا يحدث شيء.",
+      "notes": "غير موثق رسميًا ككود عام؛ أدرج لأغراض مرجعية فقط مع مستوى ثقة منخفض.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/"
+      ]
+    },
+    {
+      "code": "*#07#",
+      "purpose": "قد يعرض معلومات تنظيمية أو معلومات SAR في بعض الأجهزة.",
+      "compat": "يختلف حسب الشركة والطراز والمنطقة؛ قد لا يعمل. يمكن العثور على معلومات SAR في إعدادات الجهاز أو الوثائق الرسمية عند توفرها.",
+      "risk": "low",
+      "category": "معلومات تنظيمية",
+      "expected_output": "قد تظهر معلومات تنظيمية أو لا يحدث شيء.",
+      "notes": "ليس كودًا مضمونًا عالميًا؛ اعتمد على صفحة الشركة الرسمية أو الملصق/الوثائق التنظيمية عند الحاجة.",
+      "data_level": "unverified",
+      "last_verified": null,
+      "source_urls": [
+        "https://www.androidauthority.com/hidden-android-settings-869482/",
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "code": "*#002#",
+      "purpose": "استعلام عن حالة تحويل المكالمات بجميع أنواعه، إذا دعمته الشبكة والهاتف.",
+      "compat": "هواتف وشبكات GSM/3GPP التي تدعم استعلامات MMI؛ النتيجة تختلف حسب المشغّل وVoLTE/IMS.",
+      "risk": "low",
+      "category": "خدمات الشبكة (MMI/3GPP)",
+      "expected_output": "قد تعرض الشبكة حالات تحويل المكالمات؛ وقد يرفض المشغّل الرمز أو لا يعرض كل الحالات.",
+      "notes": "استعلام يبدأ بـ *# ولا يُفترض أن يغيّر الإعدادات. لا تخلطه مع رموز التفعيل أو الإلغاء التي تبدأ بـ * أو # أو ##.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf"
+      ]
+    },
+    {
+      "code": "*#004#",
+      "purpose": "استعلام عن حالات تحويل المكالمات المشروطة، مثل الانشغال أو عدم الرد أو عدم التوفر، إذا دعمه المشغّل.",
+      "compat": "هواتف وشبكات GSM/3GPP التي تدعم استعلامات MMI؛ الدعم ليس مضمونًا على كل شبكة أو اتصال IMS.",
+      "risk": "low",
+      "category": "خدمات الشبكة (MMI/3GPP)",
+      "expected_output": "قد تعرض الشبكة حالات التحويل المشروط، أو رسالة بعدم الدعم.",
+      "notes": "استعلام فقط؛ لا تدخل صيغ التفعيل أو الإلغاء المشابهة إلا بعد فهم أثرها.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf"
+      ]
+    },
+    {
+      "code": "*#33#",
+      "purpose": "استعلام عن حالة حظر المكالمات الصادرة (Call Barring)، إذا كانت الخدمة مدعومة.",
+      "compat": "يعتمد على دعم الشريحة والمشغّل ونوع الخدمة؛ قد يتطلب PIN2/كلمة مرور خدمة في عمليات التغيير، لكن هذا الرمز استعلام.",
+      "risk": "low",
+      "category": "خدمات الشبكة (MMI/3GPP)",
+      "expected_output": "قد تظهر حالة الحظر أو رسالة بأن الخدمة غير مدعومة.",
+      "notes": "هذا الرمز للاستعلام. لا تستخدم رموز تفعيل/إلغاء حظر المكالمات أو تغيّر كلمات مرور الخدمة دون الرجوع إلى المشغّل.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf"
+      ]
+    },
+    {
+      "code": "*#35#",
+      "purpose": "استعلام عن حالة حظر المكالمات الواردة (Call Barring)، إذا كانت الخدمة مدعومة.",
+      "compat": "يعتمد على دعم الشريحة والمشغّل ونوع الخدمة؛ قد لا يعمل على بعض الشبكات أو اتصالات IMS.",
+      "risk": "low",
+      "category": "خدمات الشبكة (MMI/3GPP)",
+      "expected_output": "قد تظهر حالة حظر المكالمات الواردة أو رسالة بعدم الدعم.",
+      "notes": "استعلام فقط. لا تستخدم صيغ التفعيل أو الإلغاء المجاورة دون معرفة أثرها؛ عند الشك اسأل مشغّل الشبكة.",
+      "data_level": "verified",
+      "last_verified": "2026-10-28",
+      "source_urls": [
+        "https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S24",
+      "model_number": "",
+      "os_versions": "Android 14+ (يختلف حسب التحديث والمنطقة)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز للتصفح الأولي فقط. لا يحتوي رقم SKU/رمز طراز إقليمي؛ تحقّق من الإعدادات > حول الهاتف ومن صفحة دعم Samsung قبل تنزيل firmware أو اختيار ملفات إصلاح.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy S24 Ultra",
+      "model_number": "",
+      "os_versions": "Android 14+ (يختلف حسب التحديث والمنطقة)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز، وليس تحديدًا دقيقًا للنسخة الإقليمية. طابق رقم الطراز الكامل قبل أي إجراء صيانة برمجية.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A55 5G",
+      "model_number": "",
+      "os_versions": "Android 14+ (يختلف حسب التحديث والمنطقة)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط؛ رقم الطراز الكامل غير مدخل. لا تستخدم ملف نظام إلا بعد مطابقة الرمز الإقليمي وإصدار البرنامج.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "brand": "Samsung",
+      "name": "Galaxy A15 5G",
+      "model_number": "",
+      "os_versions": "Android 14+ (يختلف حسب التحديث والمنطقة)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط؛ توجد اختلافات محتملة بين نسخ LTE/5G والمناطق. تحقّق من رقم الطراز الفعلي.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.samsung.com/support/"
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "name": "Xiaomi 14",
+      "model_number": "",
+      "os_versions": "Android مع HyperOS/MIUI حسب التحديث",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط. لا تعتمد عليه لاختيار ROM أو firmware؛ طابق رمز الجهاز والمنطقة وإصدار bootloader من المصادر الرسمية.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.mi.com/global/support/"
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "name": "Redmi Note 13 Pro 5G",
+      "model_number": "",
+      "os_versions": "Android مع HyperOS/MIUI حسب التحديث",
+      "region": "يختلف حسب المنطقة",
+      "notes": "قد تختلف النسخ العالمية والصينية ونسخ 4G/5G. هذا السجل لا يحدد رمز الجهاز بدقة.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.mi.com/global/support/"
+      ]
+    },
+    {
+      "brand": "Xiaomi",
+      "name": "POCO X6 Pro 5G",
+      "model_number": "",
+      "os_versions": "Android مع HyperOS/MIUI حسب التحديث",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط؛ طابق رمز الجهاز والمنطقة قبل أي تنزيل أو تفليش.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://www.mi.com/global/support/"
+      ]
+    },
+    {
+      "brand": "Google",
+      "name": "Pixel 8",
+      "model_number": "",
+      "os_versions": "Android (تحديثات Pixel الرسمية بحسب الجهاز)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز. استخدم صفحة Google الرسمية لتحديثات النظام وصور المصنع، وتأكد من رقم الطراز/الجهاز قبل اختيار ملف.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.google.com/pixelphone/"
+      ]
+    },
+    {
+      "brand": "Google",
+      "name": "Pixel 8 Pro",
+      "model_number": "",
+      "os_versions": "Android (تحديثات Pixel الرسمية بحسب الجهاز)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز. لا تفترض توافق ملفات Pixel 8 مع Pixel 8 Pro؛ تحقق من صفحة الدعم الخاصة بالجهاز.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.google.com/pixelphone/"
+      ]
+    },
+    {
+      "brand": "OnePlus",
+      "name": "OnePlus 12",
+      "model_number": "",
+      "os_versions": "Android مع OxygenOS حسب التحديث والمنطقة",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط؛ طابق رمز الطراز والمنطقة قبل أي حزمة تحديث أو إجراء bootloader.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://service.oneplus.com/"
+      ]
+    },
+    {
+      "brand": "OPPO",
+      "name": "Reno11 5G",
+      "model_number": "",
+      "os_versions": "Android مع ColorOS حسب التحديث والمنطقة",
+      "region": "يختلف حسب المنطقة",
+      "notes": "قد تختلف المواصفات ورموز الطراز بحسب السوق. السجل لا يثبت توافق كود اتصال أو firmware محدد.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.oppo.com/"
+      ]
+    },
+    {
+      "brand": "Huawei",
+      "name": "Pura 70",
+      "model_number": "",
+      "os_versions": "HarmonyOS/EMUI حسب السوق والنسخة",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط. خدمات Google وتوافر الأدوات تختلف حسب المنطقة والطراز؛ راجع دعم Huawei المحلي.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://consumer.huawei.com/en/support/"
+      ]
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 15",
+      "model_number": "",
+      "os_versions": "iOS (حسب التحديث المدعوم)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط. قبل الاستعادة استخدم Apple Support وتحقق من النسخ الاحتياطي وActivation Lock؛ لا توجد أكواد اتصال Android لهذا الجهاز.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.apple.com/iphone"
+      ]
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 15 Pro",
+      "model_number": "",
+      "os_versions": "iOS (حسب التحديث المدعوم)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط. لا تختَر ملف استعادة أو إجراء صيانة اعتمادًا على اسم العائلة وحده.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.apple.com/iphone"
+      ]
+    },
+    {
+      "brand": "Apple",
+      "name": "iPhone 16",
+      "model_number": "",
+      "os_versions": "iOS (حسب التحديث المدعوم)",
+      "region": "يختلف حسب المنطقة",
+      "notes": "سجل عائلة جهاز فقط. استخدم التحديث/الاستعادة الرسمية وتأكد من وجود نسخة احتياطية قبل الاستعادة.",
+      "data_level": "sample",
+      "source_urls": [
+        "https://support.apple.com/iphone"
+      ]
+    }
+  ],
+  "brands": [
+    "Samsung",
+    "Xiaomi",
+    "Huawei",
+    "OPPO",
+    "OnePlus",
+    "Vivo",
+    "Realme",
+    "Infinix",
+    "Google",
+    "Apple"
+  ],
+  "issues": [
+    {
+      "title": "الهاتف عالق عند الشعار بعد إعادة التشغيل",
+      "symptoms": "يبقى الهاتف على شعار الشركة ولا يصل إلى شاشة القفل.",
+      "steps": "1) اشحن الجهاز 30 دقيقة وتحقق من عدم ارتفاع حرارته. 2) جرّب إعادة تشغيل إجبارية حسب دليل الشركة والطراز. 3) إذا دخل النظام، انسخ بياناتك فورًا وتحقق من المساحة والتحديثات الأخيرة. 4) استخدم Safe Mode فقط إذا كان متاحًا لطرازك لعزل تطبيق طرف ثالث. 5) إن استمرت المشكلة، راجع خطوات الشركة الرسمية أو مركز صيانة قبل أي مسح.",
+      "stop_when": "توقف إذا ارتفعت الحرارة بشدة، أو كانت البطارية منتفخة، أو ظهرت رسالة فشل تخزين/تحديث، أو كانت البيانات غير منسوخة. لا تختَر Wipe data/Factory reset دون موافقة صريحة ونسخة احتياطية.",
+      "risk": "mid",
+      "brand": "عام - Android",
+      "os_versions": "Android؛ تختلف الخطوات حسب الشركة والطراز"
+    },
+    {
+      "title": "الهاتف يعيد التشغيل تلقائيًا",
+      "symptoms": "إعادة تشغيل متكررة أو انطفاء عند فتح تطبيق أو أثناء الشحن.",
+      "steps": "1) افحص حرارة الهاتف والشاحن والكابل وتوقف عن الاستخدام إن سخن بشدة. 2) جرّب كابلًا وشاحنًا موثوقين ومتوافقين. 3) افحص مساحة التخزين وحدّث التطبيقات والنظام عبر القنوات الرسمية إن أمكن. 4) اختبر الوضع الآمن إن كان مدعومًا. 5) سجّل وقت المشكلة والتطبيقات التي سبقتها؛ اطلب فحص البطارية/زر الطاقة/اللوحة عند استمرارها.",
+      "stop_when": "لا تواصل الشحن إذا وجدت انتفاخًا أو رائحة أو حرارة غير طبيعية. لا تفتح الهاتف ولا تنفّذ إعادة ضبط قبل حفظ البيانات.",
+      "risk": "mid",
+      "brand": "عام - Android",
+      "os_versions": "Android؛ تختلف الأدوات حسب الجهاز"
+    },
+    {
+      "title": "الهاتف لا يتعرف على USB أو ADB",
+      "symptoms": "أمر adb devices لا يعرض الجهاز أو يظهر unauthorized/offline.",
+      "steps": "1) استخدم كابل بيانات لا كابل شحن فقط، وجرّب منفذ USB آخر. 2) فعّل خيارات المطور وتصحيح USB من إعدادات الهاتف بموافقة المالك. 3) افتح الهاتف ووافق على بصمة RSA التي تظهر عليه. 4) على Windows ثبّت تعريف USB الرسمي للشركة عند الحاجة، وحدّث Android Platform-Tools من موقع Android Developers. 5) افصل وأعد التوصيل ثم نفّذ adb devices مرة أخرى.",
+      "stop_when": "لا تحاول تجاوز قفل الشاشة أو موافقة RSA. إذا كان الجهاز تابعًا لمؤسسة، اتبع سياسة الإدارة الرسمية.",
+      "risk": "low",
+      "brand": "Android",
+      "os_versions": "Android مع دعم ADB"
+    },
+    {
+      "title": "الهاتف ممتلئ ولا يمكن تثبيت تحديث",
+      "symptoms": "تحذير مساحة منخفضة أو فشل تنزيل/تثبيت التحديث.",
+      "steps": "1) تحقّق من المساحة في الإعدادات > التخزين. 2) انسخ الصور والملفات المهمة إلى وجهة موثوقة وتحقق من نجاح النسخة. 3) احذف التنزيلات والملفات المكررة التي تعرفها فقط، وأزل تطبيقات غير مستخدمة من الإعدادات. 4) أعد التشغيل وحاول التحديث الرسمي عبر Wi‑Fi وشحن كافٍ. 5) إن استمر الفشل، سجّل نص الخطأ ورمز التحديث وراجع دعم الشركة.",
+      "stop_when": "لا تحذف مجلدات النظام أو بيانات تطبيقات غير معروفة عبر ADB. لا تستخدم أدوات تنظيف مجهولة ولا تمسح البيانات قبل النسخ الاحتياطي.",
+      "risk": "low",
+      "brand": "عام - Android",
+      "os_versions": "Android؛ المساحة المطلوبة تختلف حسب التحديث"
+    },
+    {
+      "title": "استنزاف البطارية أو ارتفاع الحرارة",
+      "symptoms": "هبوط سريع في الشحن، حرارة أثناء الخمول، أو إيقاف بسبب الحرارة.",
+      "steps": "1) أوقف الألعاب والتطبيقات الثقيلة واترك الجهاز يبرد بعيدًا عن الشمس. 2) افحص استخدام البطارية في الإعدادات وحدّث التطبيقات من المتجر الرسمي. 3) أعد التشغيل واختبر الشبكة؛ ضعف التغطية قد يزيد الاستهلاك. 4) استخدم شاحنًا وكابلًا موثوقين. 5) إذا استمر الاستنزاف أو كان الجهاز قديمًا، اطلب فحص البطارية لدى فني مؤهل.",
+      "stop_when": "أوقف الشحن والاستخدام فورًا إذا كانت البطارية منتفخة أو ظهرت رائحة أو دخان أو حرارة شديدة. لا تثقب البطارية ولا تضغط عليها.",
+      "risk": "mid",
+      "brand": "عام - Android/iPhone",
+      "os_versions": "أنظمة الهواتف الحديثة؛ تختلف مؤشرات البطارية حسب الشركة"
+    },
+    {
+      "title": "تطبيق يتوقف أو لا يستجيب",
+      "symptoms": "إغلاق مفاجئ أو رسالة التطبيق لا يستجيب أو تجمد عند فتحه.",
+      "steps": "1) أعد تشغيل التطبيق ثم الهاتف. 2) حدّث التطبيق والنظام من المصادر الرسمية. 3) تأكد من وجود مساحة كافية. 4) جرّب مسح ذاكرة التخزين المؤقت من إعدادات التطبيق إذا كان الخيار متاحًا. 5) إذا استمر، راجع سجل الأعطال أو أعد تثبيت التطبيق بعد التأكد من مزامنة بياناته.",
+      "stop_when": "لا تستخدم مسح البيانات أو إزالة التطبيق قبل التحقق من النسخ الاحتياطي ومعلومات تسجيل الدخول؛ قد تفقد بيانات محلية.",
+      "risk": "low",
+      "brand": "عام - Android",
+      "os_versions": "Android؛ قد تختلف أسماء القوائم"
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>خبير صيانة الهواتف</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0b5c70">
+<link rel="icon" href="/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f8;--card:#fff;--ink:#14272e;--mute:#566a72;--line:#d5e0e4;--pri:#0b5c70;--pri2:#e1f0f4;--low:#1b7a43;--lowbg:#e3f4ea;--mid:#9a6200;--midbg:#fcf0d6;--hi:#b3261e;--hibg:#fbe4e2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b20;--card:#16282f;--ink:#e6f0f3;--mute:#9db3bb;--line:#2a424b;--pri:#6cc4da;--pri2:#173a45;--low:#6fd39a;--lowbg:#15352435;--mid:#f0b64d;--midbg:#3a2d10;--hi:#ff8f87;--hibg:#3d1a18;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1b20;--card:#16282f;--ink:#e6f0f3;--mute:#9db3bb;--line:#2a424b;--pri:#6cc4da;--pri2:#173a45;--low:#6fd39a;--lowbg:#153524;--mid:#f0b64d;--midbg:#3a2d10;--hi:#ff8f87;--hibg:#3d1a18;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif}
+header{background:var(--pri);color:#fff;padding:14px 16px 0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) header{background:#0b2d38;color:#e6f0f3}}
+header h1{margin:0;font-size:20px}header p{margin:0 0 8px;font-size:13px;opacity:.85}
+nav{display:flex;gap:4px;overflow-x:auto;padding-bottom:0}
+nav button{flex:none;background:none;border:0;color:inherit;font:inherit;font-size:14px;padding:8px 12px;border-bottom:3px solid transparent;cursor:pointer;opacity:.8}
+nav button[aria-current=true]{border-color:#fff;opacity:1;font-weight:700}
+main{max-width:900px;margin:0 auto;padding:18px 16px 60px}
+h2{font-size:22px;margin:4px 0 6px}h3{font-size:17px;margin:14px 0 4px}
+.sub{color:var(--mute);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.tile{all:unset;box-sizing:border-box;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile:hover,.tile:focus-visible{border-color:var(--pri);outline:2px solid var(--pri2)}
+.tile b{display:block}.tile span{color:var(--mute);font-size:14px}
+input,select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+input[type=search]{width:100%;font-size:17px}
+button.b{font:inherit;background:var(--pri);color:#fff;border:0;border-radius:8px;padding:9px 16px;cursor:pointer}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) button.b{color:#0e1b20}}
+button.g{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 14px;cursor:pointer}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.badge{display:inline-block;font-size:12px;padding:1px 9px;border-radius:99px;margin-inline-start:6px;font-weight:500}
+.low{background:var(--lowbg);color:var(--low)}.mid{background:var(--midbg);color:var(--mid)}.hi{background:var(--hibg);color:var(--hi)}.nt{background:var(--pri2);color:var(--pri)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:2px 14px}
+summary{cursor:pointer;padding:10px 0;font-weight:500}
+.warn{border-inline-start:4px solid var(--mid);background:var(--midbg);padding:10px 14px;border-radius:8px;margin:10px 0}
+.stop{border-inline-start:4px solid var(--hi);background:var(--hibg);padding:8px 12px;border-radius:8px;margin:8px 0}
+code,pre{direction:ltr;unicode-bidi:plaintext;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;overflow-x:auto;margin:4px 0;text-align:left}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}td,th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+a{color:var(--pri)}
+.hint{font-size:14px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header>
+<h1>خبير صيانة الهواتف</h1>
+<p>تشخيص وإرشاد برمجي آمن، دون فتح الهاتف. نموذج أولي: المحتوى تعليمي ويحتاج مراجعة</p>
+<nav id="nav" aria-label="الأقسام"></nav>
+</header>
+<main id="app" tabindex="-1"></main>
+<section id="aiwrap" hidden style="max-width:900px;margin:0 auto;padding:0 16px 60px"></section>
+
+<script>
+"use strict";
+const SRC={
+ adb:["وثائق ADB الرسمية","https://developer.android.com/tools/adb"],
+ pt:["أدوات المنصة (Platform-Tools) الرسمية","https://developer.android.com/tools/releases/platform-tools"],
+ dev:["خيارات المطور وتصحيح USB","https://developer.android.com/studio/debug/dev-options"],
+ safe:["الوضع الآمن في Android (دعم Google)","https://support.google.com/android/answer/2844832"],
+ gacc:["استرداد حساب Google","https://support.google.com/accounts/answer/7682439"],
+ aacc:["استرداد حساب Apple (iForgot)","https://iforgot.apple.com"],
+ aipho:["دعم iPhone الرسمي من Apple","https://support.apple.com/iphone"],
+ icl:["دعم iCloud من Apple","https://support.apple.com/icloud"],
+ gph:["مساعدة صور Google","https://support.google.com/photos"],
+ gand:["مساعدة Android من Google","https://support.google.com/android"],
+ sam:["دعم Samsung","https://www.samsung.com/support/"],
+ mmi:["توثيق رموز MMI (oFono استنادًا إلى 3GPP TS 22.030)", "https://git.sysmocom.de/sysmocom/ofono/src/branch/master/doc/mmi-codes.txt"],
+ gpp:["قائمة مواصفات 3GPP السلسلة 22 (تتضمن TS 22.030)", "https://www.3gpp.org/DynaReport/22-series.htm"],
+ fdroid:["F-Droid: تطبيق Service Menu (مصدر ثانوي)", "https://f-droid.org/packages/sony.hidden.servicemenu"],
+ pa:["PhoneArena: قائمة Testing المخفية (مصدر ثانوي)", "https://www.phonearena.com/news/How-to-access-your-Android-phones-hidden-Testing-menu_id73160"]
+ ,
+ etsi_mmi:["مواصفة ETSI/3GPP TS 22.030 الرسمية لأكواد MMI","https://www.etsi.org/deliver/etsi_ts/122000_122099/122030/14.00.00_60/ts_122030v140000p.pdf"],
+ pixel_support:["دعم هواتف Google Pixel الرسمي","https://support.google.com/pixelphone/"],
+ oneplus_support:["دعم OnePlus الرسمي","https://service.oneplus.com/"],
+ oppo_support:["دعم OPPO الرسمي","https://support.oppo.com/"],
+ huawei_support:["دعم Huawei الرسمي","https://consumer.huawei.com/en/support/"],
+ xiaomi_support:["دعم Xiaomi الرسمي","https://www.mi.com/global/support/"],
+ android_dev:["وثائق Android الرسمية","https://developer.android.com/"],
+ dialer_secondary:["مرجع ثانوي لأكواد Android المخفية","https://www.androidauthority.com/hidden-android-settings-869482/"]
+};
+/* مستوى التوثيق: كل المداخل أدناه "عام/تعليمي" ولم تُراجَع بعد مراجعة بشرية، ولا تخص موديلًا بعينه */
+const KB=[
+{id:"boot",t:"الهاتف عالق على الشعار أو يعيد التشغيل (Bootloop)",cat:"boot",risk:"low",loss:"لا في الخطوات 1–3، نعم في الأخيرة",
+ sym:"يظهر شعار الشركة ولا يكتمل الإقلاع، أو يعيد التشغيل تلقائيًا.",tools:"لا شيء / كمبيوتر للاستعادة الرسمية",pc:"اختياري",
+ steps:["اشحن الهاتف 30 دقيقة على شاحن أصلي ثم جرّب التشغيل (غالبًا البطارية فارغة تمامًا).","انزع بطاقة SIM وبطاقة الذاكرة وأي ملحقات ثم أعد المحاولة.","جرّب إعادة تشغيل قسرية بحسب طريقة الشركة المصنّعة لموديلك (تختلف بين الأجهزة، راجع صفحة دعمها).","إن وصلت إلى الإقلاع الآمن فأزل آخر التطبيقات المثبتة.","ملاحظة: مسح الكاش من Recovery متوسط الخطورة ومتاح في بعض الأجهزة فقط.","خيار أخير: إعادة ضبط المصنع من Recovery. عالي الخطورة ويمحو البيانات. لا تبدأ به قبل موافقتك الصريحة وبعد استنفاد ما سبق."],
+ stop:"إن استمر العطل بعد الخطوات غير المدمرة، أو ظهرت رسالة خطأ عن النظام/التحقق، توقف وتواصل مع الدعم الرسمي ولا تُفلّش أي ملف عشوائي.",src:["safe","gand"]},
+{id:"batt",t:"نفاد البطارية السريع أو ارتفاع الحرارة",cat:"battery",risk:"low",loss:"لا",
+ sym:"الشحن يهبط بسرعة أو الهاتف ساخن دون استخدام ثقيل.",tools:"إعدادات الهاتف، وADB اختياريًا",pc:"اختياري",
+ steps:["افتح إعدادات البطارية وانظر أي التطبيقات تستهلك أكثر، وأوقف أو احذف المشبوه منها.","حدّث النظام والتطبيقات، فبعض الأعطال تُصلح بتحديث.","افحص الشاحن والكابل، وتجنّب الشحن أثناء الألعاب الثقيلة.","للمتقدمين: نفّذ الأمر adb shell dumpsys battery للاطلاع على الحالة والحرارة (انظر قسم ADB). التقدير البرمجي لصحة البطارية ليس قياسًا دقيقًا للسعة، وبعض الأجهزة لا تكشف كل البيانات."],
+ stop:"انتفاخ البطارية أو رائحة أو حرارة شديدة: افصل الشحن وتوقف عن الاستخدام وتواصل مع مركز صيانة معتمد فورًا.",src:["adb","gand"]},
+{id:"net",t:"مشكلات Wi-Fi وبيانات الجوال",cat:"network",risk:"low",loss:"لا (إعادة ضبط الشبكة تحذف شبكات Wi-Fi المحفوظة)",
+ sym:"لا اتصال، أو بطء، أو إشارة غير مستقرة.",tools:"لا شيء",pc:"لا",
+ steps:["شغّل وضع الطيران 10 ثوانٍ ثم أطفئه.","جرّب شبكة أخرى أو شريحة SIM في هاتف آخر لتحديد مصدر المشكلة (الهاتف أم الشبكة).","انسَ شبكة Wi-Fi وأعد الاتصال بها.","راجع إعدادات APN مع مزوّد الخدمة (لا تغيّرها بأرقام من مصدر مجهول).","إعادة ضبط إعدادات الشبكة: متوسطة الخطورة، تمسح كلمات مرور Wi-Fi المحفوظة وأزواج Bluetooth."],
+ stop:"إن ظهرت المشكلة مع كل الشبكات وبأكثر من SIM، فربما العطل في الهاتف نفسه؛ تواصل مع الدعم الرسمي. للتحقق من IMEI استخدم قنوات المشغّل أو الشركة الرسمية.",src:["gand"]},
+{id:"slow",t:"بطء الهاتف وامتلاء التخزين وتوقف التطبيقات",cat:"apps",risk:"low",loss:"لا",
+ sym:"تعليق، تطبيقات تغلق وحدها، رسالة «مساحة التخزين ممتلئة».",tools:"لا شيء",pc:"لا",
+ steps:["اترك 10–15% من التخزين فارغًا على الأقل (ننصح بذلك كقاعدة عامة وليس رقمًا رسميًا).","انقل الصور والفيديو إلى نسخة سحابية ثم احذفها من الهاتف.","امسح كاش التطبيق المعطوب، ثم حدّثه، ثم أعد تثبيته إن لزم (احفظ بياناته أولًا).","أعد تشغيل الهاتف وحدّث النظام.","للمتقدمين: حلّل سجل النظام من قسم «تحليل السجل»."],
+ stop:"إن استمر الانهيار في كل التطبيقات رغم المساحة الكافية، قد يكون العطل في النظام؛ انتقل إلى مركز الإنقاذ.",src:["gand"]},
+{id:"upd",t:"فشل تحديث النظام",cat:"update",risk:"mid",loss:"لا غالبًا، لكن خذ نسخة احتياطية قبل أي محاولة",
+ sym:"التحديث يتوقف أو يظهر خطأ بعد التنزيل أو أثناء التثبيت.",tools:"Wi-Fi، شاحن، مساحة",pc:"قد يلزم أداة الشركة الرسمية",
+ steps:["تأكد من مساحة فارغة كافية وشحن فوق 50% واتصال Wi-Fi ثابت.","أعد تشغيل الهاتف وكرر المحاولة.","على iPhone: جرّب التحديث عبر الكمبيوتر باستخدام الأدوات الرسمية من Apple.","على Android: استخدم أداة التحديث الرسمية للشركة، وتحقق أن الإصدار يطابق الطراز والمنطقة.","لا تنزّل ملفات Firmware من مصادر مجهولة، ولا ترجع لإصدار أقدم قبل فهم المخاطر (قد يمنع الإقلاع أو يعطّل الحماية)."],
+ stop:"إن علق الجهاز أثناء التحديث أو ظهرت رسالة عن التحقق/الحماية، توقف وتواصل مع الدعم الرسمي.",src:["aipho","sam"]},
+{id:"usb",t:"الكمبيوتر لا يتعرف على الهاتف",cat:"apps",risk:"low",loss:"لا",
+ sym:"لا يظهر الهاتف في الكمبيوتر أو لا يظهر في adb devices.",tools:"كابل بيانات سليم",pc:"نعم",
+ steps:["بدّل الكابل (كثير منها للشحن فقط) وجرّب منفذًا مباشرًا في الكمبيوتر.","اختر وضع «نقل الملفات» من إشعار USB على الهاتف.","فعّل خيارات المطور ثم تصحيح USB ووافق على نافذة السماح بالكمبيوتر.","ثبّت التعريفات من موقع الشركة المصنّعة الرسمي، وأعد تشغيل الكمبيوتر.","جرّب adb devices وانظر الحالة (device / unauthorized / لا شيء)."],
+ stop:"إن لم يتعرف أي كمبيوتر على الهاتف ولا حتى للشحن، قد يكون منفذ الشحن تالفًا؛ هذا عطل مادي خارج نطاق المنصة.",src:["dev","pt"]},
+{id:"acct",t:"نسيان قفل الشاشة أو حساب Google/Apple",cat:"account",risk:"mid",loss:"قد تُمسح البيانات عند إعادة ضبط الجهاز",
+ sym:"لا يمكن فتح الهاتف، أو يطلب حسابًا بعد إعادة الضبط.",tools:"جهاز آخر، بريد/رقم الاسترداد",pc:"لا",
+ steps:["ميّز بين: استرداد الحساب، وإعادة تعيين كلمة المرور، وإعادة ضبط الجهاز، واستعادة النسخة الاحتياطية. إعادة ضبط الجهاز لا تعيد الحساب وتمحو البيانات.","للحسابات استخدم صفحات الاسترداد الرسمية فقط (الروابط أدناه) من جهاز تعرفه.","إن لم تنجح، استعد الإثباتات: فاتورة الشراء وعلبة الجهاز وتواصل مع الشركة المصنّعة الرسمية.","لا تُدخل كلمات مرورك أو رموز التحقق في أي موقع غير رسمي، ولا تشاركها مع أحد، ولا مع هذه المنصة."],
+ stop:"المنصة لا تقدّم طرقًا لتجاوز FRP أو Activation Lock أو أي حماية مرتبطة بالملكية. هذه الحمايات مصممة لمنع السرقة.",src:["gacc","aacc"]},
+{id:"data",t:"استعادة صور وملفات محذوفة",cat:"data",risk:"low",loss:"تجنّب الكتابة فوق البيانات",
+ sym:"حذفت صورًا أو ملفات وتريد إرجاعها.",tools:"حساب النسخ الاحتياطي",pc:"لا",
+ steps:["توقف عن تصوير الجديد أو تنزيل ملفات كثيرة حتى لا تُكتب فوق المحذوف.","افتح سلة المحذوفات في Google Photos أو «المحذوفة مؤخرًا» في صور iPhone؛ لها مدة احتفاظ محدودة تختلف، راجع صفحة الدعم.","ابحث في Google Drive وiCloud والنسخ الاحتياطية الرسمية للشركة.","احذر من تطبيقات «الاستعادة» المجهولة، فقد تسرق بياناتك أو تقلل فرص الاستعادة.","في الأجهزة الحديثة المشفّرة، فرص استعادة الملفات المحذوفة نهائيًا من التخزين المحلي ضعيفة جدًا، ولا يمكن الوعد بها."],
+ stop:"إن كان الجهاز متضررًا وبياناته مهمة، توجّه إلى مختص موثوق ولا تجرّب إعادة ضبط.",src:["gph","icl"]}
+,{id:"thermal",t:"ارتفاع حرارة الهاتف",cat:"battery",risk:"mid",loss:"لا",sym:"يسخن الهاتف بشدة أثناء الشحن أو في وضع الخمول.",tools:"إعدادات الهاتف وشاحن موثوق",pc:"لا",steps:["أوقف الألعاب والتطبيقات الثقيلة واترك الهاتف يبرد في مكان جاف بعيدًا عن الشمس.","افصل الشاحن إذا كانت الحرارة غير طبيعية، وتحقق من سلامة الكابل والشاحن.","افحص استهلاك البطارية والتطبيقات التي تعمل في الخلفية من الإعدادات.","أعد التشغيل وحدّث التطبيقات والنظام عبر المصادر الرسمية.","إذا استمرت الحرارة أثناء الخمول، اطلب فحصًا فنيًا للبطارية ومنفذ الشحن."],stop:"انتفاخ البطارية أو رائحة أو دخان أو حرارة شديدة: أوقف الاستخدام والشحن فورًا ولا تضغط على البطارية؛ اطلب مساعدة فنية مؤهلة.",src:["gand"]}
+,{id:"app-crash",t:"تطبيق يتوقف أو لا يستجيب",cat:"apps",risk:"low",loss:"قد تفقد بيانات التطبيق عند مسحها",sym:"إغلاق مفاجئ أو رسالة التطبيق لا يستجيب.",tools:"إعدادات التطبيقات",pc:"اختياري",steps:["أعد تشغيل التطبيق ثم الهاتف.","حدّث التطبيق والنظام من المتجر والقنوات الرسمية.","تحقق من وجود مساحة تخزين كافية.","جرّب مسح ذاكرة التخزين المؤقت فقط إذا كان الخيار متاحًا.","إذا استمرت المشكلة، تحقق من مزامنة بيانات التطبيق قبل إعادة تثبيته."],stop:"لا تستخدم «مسح البيانات» أو إزالة التطبيق قبل التأكد من النسخ الاحتياطي وكلمات المرور؛ قد تُحذف بيانات محلية.",src:["gand"]}
+,{id:"storage",t:"امتلاء مساحة التخزين",cat:"apps",risk:"low",loss:"نعم إذا حذفت ملفات غير منسوخة",sym:"لا يمكن تثبيت تحديث أو حفظ صور وملفات جديدة.",tools:"إعدادات التخزين",pc:"اختياري",steps:["افتح إعدادات التخزين لتحديد الفئات التي تستهلك المساحة.","انسخ الصور والملفات المهمة إلى وجهة موثوقة وتحقق من نجاح النسخ.","احذف التنزيلات والملفات المكررة التي تعرفها فقط.","أزل التطبيقات غير المستخدمة من إعدادات النظام.","أعد التشغيل وحاول التحديث الرسمي بعد توفير المساحة المطلوبة."],stop:"لا تحذف مجلدات النظام أو بيانات تطبيقات مجهولة باستخدام ADB أو أدوات تنظيف غير موثوقة.",src:["gand"]}
+,{id:"boot-safe",t:"الهاتف عالق على الشعار: خطوات آمنة أولية",cat:"boot",risk:"mid",loss:"قد تُفقد البيانات في إعادة ضبط المصنع",sym:"شعار الشركة ظاهر دون الوصول إلى شاشة القفل.",tools:"شاحن موثوق؛ كمبيوتر عند الحاجة",pc:"اختياري",steps:["اشحن الهاتف 30 دقيقة إذا لم توجد حرارة غير طبيعية.","جرّب إعادة تشغيل إجبارية حسب تعليمات الشركة الخاصة بالطراز.","انزع الملحقات وبطاقة الذاكرة إن أمكن بأمان ثم أعد المحاولة.","إذا دخل النظام، انسخ بياناتك فورًا وافحص المساحة والتطبيقات الأخيرة.","راجع أداة الاستعادة الرسمية الخاصة بالشركة قبل التفكير في مسح البيانات أو تفليش النظام."],stop:"لا تختَر Wipe data/Factory reset ولا تفلّش ملفًا عشوائيًا. توقف إذا كانت البيانات مهمة وغير منسوخة أو ظهرت رسالة فشل تخزين/تحقق.",src:["safe","gand","sam"]}
+,{id:"reboot",t:"إعادة تشغيل تلقائية متكررة",cat:"boot",risk:"mid",loss:"لا غالبًا؛ احفظ العمل أولًا",sym:"الهاتف يعيد التشغيل أثناء الاستخدام أو الشحن.",tools:"إعدادات الهاتف وشاحن موثوق",pc:"لا",steps:["لاحظ هل يحدث العطل عند الشحن أو تشغيل تطبيق معين.","أوقف الاستخدام إذا ارتفعت الحرارة، وجرّب شاحنًا وكابلًا موثوقين.","وفّر مساحة تخزين وحدّث النظام والتطبيقات رسميًا.","جرّب الوضع الآمن إن كان مدعومًا لعزل تطبيقات الطرف الثالث.","إذا استمرت المشكلة، اطلب فحص البطارية وزر الطاقة والعتاد لدى فني مؤهل."],stop:"أوقف الشحن عند انتفاخ البطارية أو الرائحة أو الحرارة الشديدة. لا تنفّذ إعادة ضبط قبل النسخ الاحتياطي.",src:["safe","gand"]}
+,{id:"update-space",t:"فشل تحديث Android بسبب المساحة أو التنزيل",cat:"update",risk:"mid",loss:"قد تحدث خسارة بيانات إذا انقطع تحديث أو اختير المسح",sym:"فشل التنزيل أو التثبيت أو ظهور تحذير مساحة غير كافية.",tools:"Wi-Fi ثابت وشاحن ومساحة كافية",pc:"أحيانًا",steps:["تحقق من اتصال Wi-Fi والمساحة الحرة والشحن الكافي.","أعد تشغيل الهاتف ثم جرّب التحديث من الإعدادات.","تحقق من التاريخ والوقت التلقائيين إذا فشل التحقق من الاتصال.","استخدم فقط أداة أو حزمة التحديث الرسمية المطابقة للطراز والمنطقة.","دوّن نص الخطأ ورمزه قبل التواصل مع الدعم."],stop:"لا تفصل الطاقة أثناء تثبيت تحديث ولا تستخدم Firmware من مصدر مجهول. إذا كان الجهاز عالقًا أثناء التثبيت، اتبع تعليمات الشركة للطراز تحديدًا.",src:["gand","sam"]}
+];
+const CMD=[
+{c:"adb devices",d:"يعرض الأجهزة المتصلة وحالتها.",risk:"low",out:"device = جاهز. unauthorized = وافق على نافذة السماح في الهاتف. قائمة فارغة = مشكلة كابل/تعريف.",src:"adb"},
+{c:"adb shell getprop ro.build.version.release",d:"يعرض إصدار Android.",risk:"low",out:"رقم الإصدار مثل 14 (القيمة تعتمد على جهازك).",src:"adb"},
+{c:"adb shell dumpsys battery",d:"حالة البطارية الحالية (مستوى، حرارة، شحن).",risk:"low",out:"قد تُعرض الحرارة بعُشر درجة. لا يعطي سعة فعلية دقيقة.",src:"adb"},
+{c:"adb logcat -d",d:"يطبع سجل النظام الحالي ثم ينتهي. الصق جزءًا منه في «تحليل السجل».",risk:"low",out:"آلاف الأسطر؛ ابحث عن FATAL EXCEPTION وANR.",src:"adb"},
+{c:"adb reboot recovery",d:"يعيد التشغيل إلى Recovery.",risk:"mid",out:"قد لا يعمل على كل الأجهزة. لا تختر مسحًا من القائمة دون قرار صريح.",src:"adb"},
+{c:"fastboot devices",d:"يعرض أجهزة في وضع Fastboot.",risk:"low",out:"قائمة فارغة: الجهاز ليس في Fastboot أو التعريف ناقص.",src:"pt"},
+{c:"fastboot getvar all",d:"يقرأ متغيرات الجهاز (للقراءة فقط). الإخراج يختلف بحسب الشركة.",risk:"low",out:"قد يتضمن معلومات حساسة مثل الرقم التسلسلي؛ لا تنشره علنًا.",src:"pt"},
+{c:"fastboot flashing unlock",d:"للتعريف والتحذير فقط. يفتح Bootloader.",risk:"high",out:"يمسح بيانات الجهاز عادة ويضعف الحماية وقد يلغي الضمان. لا تنفذه بدون فهم كامل ونسخة احتياطية.",src:"pt"}
+,{c:"adb shell getprop ro.product.manufacturer",d:"قراءة الشركة المصنّعة كما يبلّغ عنها النظام.",risk:"low",out:"اسم الشركة أو قيمة فارغة. لا تعتبرها إثباتًا وحيدًا لهوية الجهاز.",src:"adb"}
+,{c:"adb shell getprop ro.product.model",d:"قراءة اسم/معرّف الطراز من النظام.",risk:"low",out:"قد يختلف عن رقم SKU الإقليمي؛ لا تختَر Firmware بناءً عليه وحده.",src:"adb"}
+,{c:"adb shell getprop ro.build.version.sdk",d:"عرض مستوى API الخاص بإصدار Android.",risk:"low",out:"عدد صحيح يمثل مستوى API، وليس رقم Android التسويقي.",src:"adb"}
+,{c:"adb shell wm size",d:"قراءة دقة العرض الحالية.",risk:"low",out:"قد يعرض Physical size وOverride size. هذا الأمر للقراءة فقط.",src:"adb"}
+,{c:"adb shell wm density",d:"قراءة كثافة العرض الحالية.",risk:"low",out:"قد يعرض Physical density وOverride density. لا تضف أرقام تغيير إلا إذا كنت تقصد تعديل الواجهة.",src:"adb"}
+,{c:"adb shell df -h /data",d:"فحص المساحة المستخدمة والمتاحة في قسم بيانات المستخدم.",risk:"low",out:"جدول أحجام؛ قد يختلف التنسيق حسب النظام.",src:"adb"}
+,{c:"adb shell pm list packages -3",d:"عرض قائمة حزم التطبيقات المثبتة من المستخدم غالبًا.",risk:"low",out:"قائمة package: مع أسماء الحزم؛ راجعها قبل مشاركة المخرجات.",src:"adb"}
+,{c:"adb shell dumpsys meminfo",d:"عرض ملخص استخدام الذاكرة.",risk:"low",out:"معلومات كثيرة تختلف حسب إصدار Android؛ لقطة لحظية وليست تشخيصًا نهائيًا.",src:"adb"}
+,{c:"adb shell dumpsys power",d:"قراءة حالة إدارة الطاقة التي يعرضها النظام.",risk:"low",out:"تفاصيل تختلف بين الأجهزة؛ راجع المعلومات الحساسة قبل مشاركة الناتج.",src:"adb"}
+,{c:"adb logcat -b crash -d",d:"قراءة سجل الأعطال المتاح ثم إنهاء الأمر.",risk:"low",out:"قد لا توجد سجلات؛ راجع المخرجات لإخفاء المعلومات الشخصية.",src:"adb"}
+,{c:"adb bugreport",d:"إنشاء تقرير تشخيص شامل قد يستغرق وقتًا.",risk:"low",out:"قد يجمع سجلات وبيانات تشغيل حساسة جدًا؛ لا تشاركه قبل مراجعته وتنقيحه.",src:"adb"}
+,{c:"adb shell am force-stop PACKAGE_NAME",d:"إيقاف تطبيق محدد بالقوة. استبدل PACKAGE_NAME باسم الحزمة الصحيح.",risk:"mid",out:"قد يغلق التطبيق وتضيع بيانات غير محفوظة؛ لا توقف تطبيقات النظام عشوائيًا.",src:"adb"}
+,{c:"adb reboot",d:"إعادة تشغيل الهاتف المتصل.",risk:"mid",out:"ينقطع اتصال ADB مؤقتًا؛ احفظ العمل ولا تنفذه أثناء تحديث أو عملية كتابة بيانات.",src:"adb"}
+,{c:"adb install app.apk",d:"تثبيت ملف APK موثوق من الكمبيوتر؛ استبدل app.apk بالمسار الصحيح.",risk:"mid",out:"قد يظهر Success أو خطأ توافق/توقيع. لا تثبّت APK مجهول المصدر.",src:"adb"}
+,{c:"adb shell pm clear PACKAGE_NAME",d:"مسح بيانات تطبيق محدد. إجراء مدمّر لبيانات التطبيق.",risk:"high",out:"يحذف بيانات التطبيق وإعداداته المحلية وقد يفقد ملفات غير متزامنة؛ تحقق من النسخ الاحتياطي واسم الحزمة أولًا.",src:"adb"}
+,{c:"fastboot getvar product",d:"قراءة اسم المنتج الذي يبلّغ عنه محمّل الإقلاع إذا كان مدعومًا.",risk:"low",out:"قد يظهر معرّف داخلي أو رسالة أن المتغير غير مدعوم؛ لا يكفي لاختيار Firmware.",src:"pt"}
+,{c:"fastboot reboot",d:"إعادة التشغيل من وضع Fastboot إلى النظام عادةً.",risk:"mid",out:"لا تنفذه أثناء التفليش؛ وقد يختلف الدعم بين الشركات.",src:"pt"},
+{c:"adb shell dumpsys connectivity",d:"قراءة حالة اتصالات الشبكة التي يراها Android.",risk:"low",out:"يعرض شبكات وواجهات اتصال وحالاتها؛ تختلف التفاصيل وقد تتضمن معرفات خاصة.",src:"adb"},
+{c:"adb shell dumpsys wifi",d:"قراءة حالة Wi‑Fi وتشخيصها بصورة أولية.",risk:"low",out:"قد تظهر حالة Wi‑Fi والشبكات؛ قد تكون بعض التفاصيل محجوبة حسب الإصدار. أخفِ أسماء الشبكات والمعرفات قبل المشاركة.",src:"adb"},
+{c:"adb shell dumpsys thermalservice",d:"قراءة معلومات خدمة الحرارة إذا كانت متاحة.",risk:"low",out:"قد يعرض مستويات حرارية أو لا تتوفر الخدمة. القراءة لقطة لحظية وليست قياسًا طبيًا أو حكمًا نهائيًا على البطارية.",src:"adb"},
+{c:"adb shell getprop ro.boot.verifiedbootstate",d:"قراءة حالة Verified Boot التي يبلّغ عنها النظام.",risk:"low",out:"قد تكون القيمة green/orange/yellow أو فارغة بحسب الجهاز. لا تستخدمها وحدها لإثبات سلامة النظام.",src:"adb"},
+{c:"adb shell getprop ro.boot.flash.locked",d:"قراءة خاصية قفل محمّل الإقلاع إذا كانت متاحة.",risk:"low",out:"قد تظهر 1 أو 0 أو قيمة فارغة؛ تختلف الدلالة حسب الشركة. لا تحاول تغييرها عبر أوامر غير موثوقة.",src:"adb"},
+{c:"adb shell settings get global airplane_mode_on",d:"قراءة قيمة وضع الطيران من إعدادات النظام.",risk:"low",out:"غالبًا 1 مفعّل و0 غير مفعّل؛ قد تختلف الإتاحة أو القيمة على بعض الإصدارات.",src:"adb"},
+{c:"adb shell settings get global boot_count",d:"قراءة عداد مرات الإقلاع إن كان متاحًا.",risk:"low",out:"قد يظهر رقم أو null/قيمة فارغة بحسب الإصدار والصلاحيات. ليس سجلًا كاملًا للأعطال.",src:"adb"},
+{c:"adb shell pm list packages -d",d:"عرض الحزم المعطّلة التي يستطيع النظام إظهارها.",risk:"low",out:"قد تظهر قائمة package: أو تكون فارغة. لا تفعّل أو تعطل حزم النظام عشوائيًا.",src:"adb"},
+{c:"adb shell pm path PACKAGE_NAME",d:"عرض مسار APK لحزمة محددة. استبدل PACKAGE_NAME باسم الحزمة الفعلي.",risk:"low",out:"قد يظهر package:/... أو خطأ إذا كانت الحزمة غير موجودة/غير مرئية.",src:"adb"},
+{c:"adb shell dumpsys package PACKAGE_NAME",d:"عرض تفاصيل حزمة تطبيق محدد. استبدل PACKAGE_NAME باسم الحزمة الفعلي.",risk:"low",out:"مخرجات طويلة؛ راجع اسم الحزمة بدقة ونقّح المعرفات قبل مشاركة النص.",src:"adb"},
+{c:"adb shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.HOME",d:"تحديد نشاط الشاشة الرئيسية الذي يحله النظام.",risk:"low",out:"قد يظهر اسم مكوّن أو لا تُرجع بعض الإصدارات نتيجة. لا يغيّر إعداد الشاشة الرئيسية.",src:"adb"},
+{c:"adb shell getprop ro.product.cpu.abi",d:"قراءة معمارية ABI الأساسية التي يبلّغ عنها النظام.",risk:"low",out:"قد تظهر قيمة مثل arm64-v8a؛ لا تكفي وحدها لاختيار أي ملف APK دون التحقق من متطلبات التطبيق.",src:"adb"},
+{c:"adb shell getprop ro.build.fingerprint",d:"قراءة بصمة بناء النظام للمساعدة في التعرف على نسخة البرنامج.",risk:"low",out:"سطر طويل وقد يكشف معلومات إصدار/بناء الجهاز؛ لا تستخدمه وحده لاختيار Firmware.",src:"adb"},
+{c:"adb shell dumpsys activity activities",d:"عرض ملخص الأنشطة/المهام الحالية.",risk:"low",out:"المخرجات تختلف وقد تحتوي أسماء تطبيقات أو معلومات جلسة؛ شارك الحد الأدنى اللازم فقط.",src:"adb"},
+{c:"adb shell dumpsys diskstats",d:"عرض إحصاءات تخزين يوفّرها النظام إن كانت متاحة.",risk:"low",out:"قد تظهر إحصاءات أو تكون الخدمة غير متاحة؛ لا يساوي هذا فحصًا لصحة ذاكرة التخزين المادية.",src:"adb"}
+];
+const SERVER={on:false,ai:false};
+const RS={low:"منخفضة",mid:"متوسطة",high:"عالية"};
+/* طبقة البيانات (قابلة للاستبدال لاحقًا بـ API/قاعدة بيانات). كل سجل: source/verified/confidence. لا يُضاف شيء غير موثّق */
+const DB={schema:1,brands:["Samsung","Xiaomi","Huawei","OPPO","OnePlus","Vivo","Realme","Infinix","Google","Apple"],models:[{"brand":"Samsung","name":"Galaxy S24","model_number":"","os_versions":"Android 14+ (يختلف حسب التحديث والمنطقة)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز للتصفح الأولي فقط. لا يحتوي رقم SKU/رمز طراز إقليمي؛ تحقّق من الإعدادات > حول الهاتف ومن صفحة دعم Samsung قبل تنزيل firmware أو اختيار ملفات إصلاح.","data_level":"sample"},{"brand":"Samsung","name":"Galaxy S24 Ultra","model_number":"","os_versions":"Android 14+ (يختلف حسب التحديث والمنطقة)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز، وليس تحديدًا دقيقًا للنسخة الإقليمية. طابق رقم الطراز الكامل قبل أي إجراء صيانة برمجية.","data_level":"sample"},{"brand":"Samsung","name":"Galaxy A55 5G","model_number":"","os_versions":"Android 14+ (يختلف حسب التحديث والمنطقة)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط؛ رقم الطراز الكامل غير مدخل. لا تستخدم ملف نظام إلا بعد مطابقة الرمز الإقليمي وإصدار البرنامج.","data_level":"sample"},{"brand":"Samsung","name":"Galaxy A15 5G","model_number":"","os_versions":"Android 14+ (يختلف حسب التحديث والمنطقة)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط؛ توجد اختلافات محتملة بين نسخ LTE/5G والمناطق. تحقّق من رقم الطراز الفعلي.","data_level":"sample"},{"brand":"Xiaomi","name":"Xiaomi 14","model_number":"","os_versions":"Android مع HyperOS/MIUI حسب التحديث","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط. لا تعتمد عليه لاختيار ROM أو firmware؛ طابق رمز الجهاز والمنطقة وإصدار bootloader من المصادر الرسمية.","data_level":"sample"},{"brand":"Xiaomi","name":"Redmi Note 13 Pro 5G","model_number":"","os_versions":"Android مع HyperOS/MIUI حسب التحديث","region":"يختلف حسب المنطقة","notes":"قد تختلف النسخ العالمية والصينية ونسخ 4G/5G. هذا السجل لا يحدد رمز الجهاز بدقة.","data_level":"sample"},{"brand":"Xiaomi","name":"POCO X6 Pro 5G","model_number":"","os_versions":"Android مع HyperOS/MIUI حسب التحديث","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط؛ طابق رمز الجهاز والمنطقة قبل أي تنزيل أو تفليش.","data_level":"sample"},{"brand":"Google","name":"Pixel 8","model_number":"","os_versions":"Android (تحديثات Pixel الرسمية بحسب الجهاز)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز. استخدم صفحة Google الرسمية لتحديثات النظام وصور المصنع، وتأكد من رقم الطراز/الجهاز قبل اختيار ملف.","data_level":"sample"},{"brand":"Google","name":"Pixel 8 Pro","model_number":"","os_versions":"Android (تحديثات Pixel الرسمية بحسب الجهاز)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز. لا تفترض توافق ملفات Pixel 8 مع Pixel 8 Pro؛ تحقق من صفحة الدعم الخاصة بالجهاز.","data_level":"sample"},{"brand":"OnePlus","name":"OnePlus 12","model_number":"","os_versions":"Android مع OxygenOS حسب التحديث والمنطقة","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط؛ طابق رمز الطراز والمنطقة قبل أي حزمة تحديث أو إجراء bootloader.","data_level":"sample"},{"brand":"OPPO","name":"Reno11 5G","model_number":"","os_versions":"Android مع ColorOS حسب التحديث والمنطقة","region":"يختلف حسب المنطقة","notes":"قد تختلف المواصفات ورموز الطراز بحسب السوق. السجل لا يثبت توافق كود اتصال أو firmware محدد.","data_level":"sample"},{"brand":"Huawei","name":"Pura 70","model_number":"","os_versions":"HarmonyOS/EMUI حسب السوق والنسخة","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط. خدمات Google وتوافر الأدوات تختلف حسب المنطقة والطراز؛ راجع دعم Huawei المحلي.","data_level":"sample"},{"brand":"Apple","name":"iPhone 15","model_number":"","os_versions":"iOS (حسب التحديث المدعوم)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط. قبل الاستعادة استخدم Apple Support وتحقق من النسخ الاحتياطي وActivation Lock؛ لا توجد أكواد اتصال Android لهذا الجهاز.","data_level":"sample"},{"brand":"Apple","name":"iPhone 15 Pro","model_number":"","os_versions":"iOS (حسب التحديث المدعوم)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط. لا تختَر ملف استعادة أو إجراء صيانة اعتمادًا على اسم العائلة وحده.","data_level":"sample"},{"brand":"Apple","name":"iPhone 16","model_number":"","os_versions":"iOS (حسب التحديث المدعوم)","region":"يختلف حسب المنطقة","notes":"سجل عائلة جهاز فقط. استخدم التحديث/الاستعادة الرسمية وتأكد من وجود نسخة احتياطية قبل الاستعادة.","data_level":"sample"}],
+codes:[{"code":"*#06#","cat":"معلومات الجهاز","purpose":"يعرض رقم IMEI للهاتف.","out":"يظهر رقم IMEI على الشاشة (أو رقمان في الهواتف ثنائية الشريحة).","compat":"شائع على معظم الهواتف، ولم أتحقق منه مباشرة من مصدر في هذه الجلسة.","risk":"low","srcs":[],"level":"unverified","verified":null,"note":"للتحقق الرسمي من IMEI استخدم مشغّل الاتصال أو الشركة المصنّعة."},{"code":"*#*#4636#*#*","cat":"اختبار وتشخيص","purpose":"يفتح قائمة «Testing» المخفية: معلومات الهاتف، معلومات البطارية، إحصاءات الاستخدام، ومعلومات Wi-Fi.","out":"تظهر قائمة بأربعة أقسام فرعية.","compat":"يعمل على بعض أجهزة Android فقط؛ قد لا يعمل بحسب الشركة المصنّعة أو المشغّل أو إصدار النظام أو تطبيق الاتصال. جرّب تطبيق الاتصال الافتراضي.","risk":"mid","srcs":["pa","fdroid"],"level":"unverified","verified":"2026-10-28","note":"إيقاف الراديو من قائمة معلومات الهاتف يقطع المكالمات والرسائل والبيانات حتى تعيد تشغيله. لا تغيّر شيئًا لا تفهمه. المصدران ثانويان وليسا توثيقًا رسميًا من Google."},{"code":"*#*#7378423#*#*","cat":"اختبار وتشخيص","purpose":"يفتح قائمة الخدمة المخفية في أجهزة Sony.","out":"تظهر قائمة خدمة تحتوي أقسام اختبار ومعلومات.","compat":"أجهزة Sony Xperia فقط بحسب المصدر. قد يختلف أو لا يعمل على موديلات وإصدارات أحدث.","risk":"mid","srcs":["fdroid"],"level":"unverified","verified":"2026-10-28","note":"قائمة خدمة؛ لا تغيّر إعداداتها دون فهم. المصدر ثانوي."},{"code":"*#21#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة تحويل المكالمات غير المشروط (CFU).","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#67#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة التحويل عند الانشغال.","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#61#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة التحويل عند عدم الرد.","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#62#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة التحويل عند عدم التوفر أو خارج التغطية.","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#43#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة انتظار المكالمات.","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#30#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة عرض رقم المتصل (CLIP).","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#31#","cat":"خدمات الشبكة (مواصفة 3GPP)","purpose":"استعلام فقط: يعرض حالة إخفاء رقمك عن المتصَل به (CLIR).","out":"رسالة من الشبكة بحالة الخدمة (مفعّلة أو غير مفعّلة، وإلى أي رقم إن وجد).","compat":"مبنية على مواصفة MMI فتعمل على معظم هواتف GSM/3GPP، لكن النتيجة تعتمد على دعم المشغّل والشريحة.","risk":"low","srcs":["mmi","gpp"],"level":"verified","verified":"2026-10-28","note":"هذا استعلام لا يغيّر شيئًا. أما الصيغ التي تبدأ بـ * أو ## أو # بدل *# فتفعّل الخدمة أو تلغيها وقد تحوّل مكالماتك إلى رقم آخر، فلا تدخلها إلا وأنت تعرف أثرها."},{"code":"*#0*#","cat":"اختبارات الأجهزة","purpose":"قد يفتح قائمة اختبارات الأجهزة في بعض هواتف Samsung Galaxy (مثل الشاشة واللمس والمستشعرات).","out":"قد تظهر شبكة اختبارات للشاشة واللمس والمستشعرات؛ لا تختبر إلا ما تفهمه.","compat":"بعض موديلات Samsung Galaxy فقط؛ يعتمد على الطراز والمنطقة وإصدار النظام والمشغّل، وقد يكون معطّلًا.","risk":"mid","srcs":["dialer_secondary","sam"],"level":"unverified","verified":null,"note":"مرجع ثانوي؛ لم أجد توثيقًا رسميًا عامًا من Samsung يؤكد التوافق مع جميع الموديلات. لا يُعد اختبارًا شاملًا لكل عطل."},{"code":"*#1234#","cat":"معلومات النظام","purpose":"قد يعرض إصدارات AP/CP/CSC (معلومات البرنامج) في بعض هواتف Samsung.","out":"قد تظهر إصدارات برمجية مثل AP وCP وCSC.","compat":"بعض أجهزة Samsung فقط؛ قد لا يعمل في الموديلات أو البرامج الحديثة أو بعض المناطق.","risk":"low","srcs":["dialer_secondary","sam"],"level":"unverified","verified":null,"note":"معلومة متداولة بمصادر ثانوية وليست موثقة رسميًا لكل الأجهزة. لا تغيّر أي إعداد بناءً على النتيجة وحدها."},{"code":"*#*#6484#*#*","cat":"اختبارات الأجهزة","purpose":"قد يفتح قائمة CIT/اختبارات العتاد في بعض أجهزة Xiaomi وRedmi وPOCO.","out":"قد تظهر قائمة اختبارات تشخيصية. توفرها ومحتوياتها تختلف بين الأجهزة.","compat":"بعض الأجهزة فقط؛ قد تختلف الأكواد حسب الطراز والمنطقة وإصدار MIUI/HyperOS.","risk":"mid","srcs":["dialer_secondary","xiaomi_support"],"level":"unverified","verified":null,"note":"غير موثق رسميًا لكل الموديلات؛ استخدمه للعرض فقط ولا تغيّر خيارات غير مفهومة."},{"code":"*#*#426#*#*","cat":"تشخيص الخدمات","purpose":"قد يفتح شاشة تشخيص لخدمات Google Play (مثل حالة الاتصال/الأحداث) على بعض أجهزة Android.","out":"قد تظهر معلومات تشخيصية لخدمات Google Play أو لا يحدث شيء.","compat":"يتوقف على وجود خدمات Google Play وإصدارها وتطبيق الاتصال؛ قد لا يعمل في كل الأجهزة أو المناطق.","risk":"low","srcs":["dialer_secondary","android_dev"],"level":"unverified","verified":null,"note":"مرجع ثانوي فقط؛ لا يُعد أداة رسمية عامة لفحص الهاتف، ولا تغيّر إعدادات لا تفهمها."},{"code":"*#*#225#*#*","cat":"معلومات التطبيقات","purpose":"قد يعرض معلومات تخزين/مزامنة تقويم Android على بعض الأجهزة التي تتضمن المكوّنات المناسبة.","out":"قد تظهر معلومات مرتبطة بتقويم الجهاز، أو لا يحدث شيء.","compat":"غير مضمون؛ يعتمد على إصدار Android وتطبيقات النظام المثبتة وتطبيق الاتصال.","risk":"low","srcs":["dialer_secondary"],"level":"unverified","verified":null,"note":"غير موثق رسميًا ككود عام؛ أدرج لأغراض مرجعية فقط مع مستوى ثقة منخفض."},{"code":"*#07#","cat":"معلومات تنظيمية","purpose":"قد يعرض معلومات تنظيمية أو معلومات SAR في بعض الأجهزة.","out":"قد تظهر معلومات تنظيمية أو لا يحدث شيء.","compat":"يختلف حسب الشركة والطراز والمنطقة؛ قد لا يعمل. يمكن العثور على معلومات SAR في إعدادات الجهاز أو الوثائق الرسمية عند توفرها.","risk":"low","srcs":["dialer_secondary","sam"],"level":"unverified","verified":null,"note":"ليس كودًا مضمونًا عالميًا؛ اعتمد على صفحة الشركة الرسمية أو الملصق/الوثائق التنظيمية عند الحاجة."},{"code":"*#002#","cat":"خدمات الشبكة (MMI/3GPP)","purpose":"استعلام عن حالة تحويل المكالمات بجميع أنواعه، إذا دعمته الشبكة والهاتف.","out":"قد تعرض الشبكة حالات تحويل المكالمات؛ وقد يرفض المشغّل الرمز أو لا يعرض كل الحالات.","compat":"هواتف وشبكات GSM/3GPP التي تدعم استعلامات MMI؛ النتيجة تختلف حسب المشغّل وVoLTE/IMS.","risk":"low","srcs":["etsi_mmi"],"level":"verified","verified":"2026-10-28","note":"استعلام يبدأ بـ *# ولا يُفترض أن يغيّر الإعدادات. لا تخلطه مع رموز التفعيل أو الإلغاء التي تبدأ بـ * أو # أو ##."},{"code":"*#004#","cat":"خدمات الشبكة (MMI/3GPP)","purpose":"استعلام عن حالات تحويل المكالمات المشروطة، مثل الانشغال أو عدم الرد أو عدم التوفر، إذا دعمه المشغّل.","out":"قد تعرض الشبكة حالات التحويل المشروط، أو رسالة بعدم الدعم.","compat":"هواتف وشبكات GSM/3GPP التي تدعم استعلامات MMI؛ الدعم ليس مضمونًا على كل شبكة أو اتصال IMS.","risk":"low","srcs":["etsi_mmi"],"level":"verified","verified":"2026-10-28","note":"استعلام فقط؛ لا تدخل صيغ التفعيل أو الإلغاء المشابهة إلا بعد فهم أثرها."},{"code":"*#33#","cat":"خدمات الشبكة (MMI/3GPP)","purpose":"استعلام عن حالة حظر المكالمات الصادرة (Call Barring)، إذا كانت الخدمة مدعومة.","out":"قد تظهر حالة الحظر أو رسالة بأن الخدمة غير مدعومة.","compat":"يعتمد على دعم الشريحة والمشغّل ونوع الخدمة؛ قد يتطلب PIN2/كلمة مرور خدمة في عمليات التغيير، لكن هذا الرمز استعلام.","risk":"low","srcs":["etsi_mmi"],"level":"verified","verified":"2026-10-28","note":"هذا الرمز للاستعلام. لا تستخدم رموز تفعيل/إلغاء حظر المكالمات أو تغيّر كلمات مرور الخدمة دون الرجوع إلى المشغّل."},{"code":"*#35#","cat":"خدمات الشبكة (MMI/3GPP)","purpose":"استعلام عن حالة حظر المكالمات الواردة (Call Barring)، إذا كانت الخدمة مدعومة.","out":"قد تظهر حالة حظر المكالمات الواردة أو رسالة بعدم الدعم.","compat":"يعتمد على دعم الشريحة والمشغّل ونوع الخدمة؛ قد لا يعمل على بعض الشبكات أو اتصالات IMS.","risk":"low","srcs":["etsi_mmi"],"level":"verified","verified":"2026-10-28","note":"استعلام فقط. لا تستخدم صيغ التفعيل أو الإلغاء المجاورة دون معرفة أثرها؛ عند الشك اسأل مشغّل الشبكة."}],
+gaps(){return this.brands.filter(b=>!this.models.some(m=>m.brand===b))}};
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const link=k=>`<a href="${SRC[k][1]}" target="_blank" rel="noopener noreferrer">${SRC[k][0]}</a>`;
+const votes={};
+function kbCard(e,open){
+ return `<details ${open?"open":""}><summary>${e.t}<span class="badge ${e.risk}">خطورة ${RS[e.risk]}</span><span class="badge nt">توثيق: عام، لم يُراجَع</span></summary>
+ <p><b>الأعراض:</b> ${e.sym}</p>
+ <p class="hint">فقدان البيانات: ${e.loss} · الأدوات: ${e.tools} · الحاجة إلى كمبيوتر: ${e.pc} · احتمال النجاح: غير معروف (لا توجد بيانات موثوقة)</p>
+ <p><b>الخطوات (الأكثر أمانًا أولًا):</b></p><ol>${e.steps.map(s=>`<li>${s}</li>`).join("")}</ol>
+ <div class="stop"><b>متى تتوقف:</b> ${e.stop}</div>
+ <p class="hint">المصادر: ${e.src.map(link).join("، ")} · آخر تحقق: لم يتم</p>
+ <div class="row" data-id="${e.id}"><span>هل كان الحل مفيدًا؟</span><button class="g" data-v="1">مفيد</button><button class="g" data-v="0">غير مفيد</button><span class="hint" role="status"></span></div></details>`;
+}
+function bindVotes(root){root.querySelectorAll(".row[data-id]").forEach(r=>r.addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b)return;votes[r.dataset.id]=b.dataset.v;r.querySelector("[role=status]").textContent="شكرًا. التقييم محفوظ في هذه الصفحة فقط ويُنسى عند إغلاقها (لا خادم بعد).";}))}
+const NAV=[["home","الرئيسية"],["diag","التشخيص الذكي"],["kb","موسوعة الأعطال"],["rescue","الإنقاذ والتحديثات"],["account","الحسابات"],["data","البيانات"],["battery","البطارية"],["network","الشبكات"],["apps","التطبيقات و USB"],["adb","ADB وFastboot"],["codes","أكواد الاتصال"],["logs","تحليل السجل"],["inspect","مركز الفحص"],["devices","الأجهزة"],["academy","الأكاديمية"],["sources","المصادر"],["privacy","الخصوصية"],["status","حالة الميزات"],["admin","الإدارة"]];
+const CATS={rescue:["boot","update"],account:["account"],data:["data"],battery:["battery"],network:["network"],apps:["apps"]};
+const TITLES={rescue:"مركز الإنقاذ والتحديثات",account:"استعادة الحسابات وقفل الشاشة",data:"استعادة البيانات",battery:"مركز البطارية",network:"الشبكات والاتصال",apps:"التطبيقات والنظام واتصال USB"};
+const app=document.getElementById("app"),nav=document.getElementById("nav");
+nav.innerHTML=NAV.map(([k,t])=>`<button data-k="${k}">${t}</button>`).join("");
+nav.addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(b.dataset.k)});
+function go(k){try{history.replaceState(null,"","#"+k)}catch(e){}show(k);app.focus();scrollTo(0,0)}
+function show(k){
+ if(!NAV.some(n=>n[0]===k))k="home";
+ nav.querySelectorAll("button").forEach(b=>b.setAttribute("aria-current",b.dataset.k===k));
+ (V[k]||V.cat)(k);
+ const aw=document.getElementById("aiwrap");if(aw)aw.hidden=!(k==="diag"&&SERVER.ai);
+}
+const V={
+home(){
+ app.innerHTML=`<h2>ما الذي يحدث في هاتفك؟</h2><p class="sub">ابحث بالعَرَض أو رسالة الخطأ، أو ابدأ تشخيصًا خطوة بخطوة.</p>
+ <input type="search" id="q" placeholder="مثال: عالق على الشعار، البطارية تنفد، نسيت القفل" aria-label="بحث">
+ <div id="res"></div>
+ <div class="grid" style="margin-top:16px">
+ ${[["diag","التشخيص الذكي","أسئلة متتابعة وحلول مرتبة حسب الأمان"],["rescue","الإنقاذ والتحديثات","Bootloop وفشل التحديث"],["logs","تحليل السجل","الصق سجلًا ليُحلَّل داخل متصفحك"],["inspect","مركز الفحص","بطارية، هوية الهاتف، IMEI"],["adb","ADB وFastboot","أوامر موصوفة بمستوى الخطورة"],["account","الحسابات","مسارات رسمية للاسترداد"],["data","استعادة البيانات","توقعات واقعية"]].map(x=>`<button class="tile" data-go="${x[0]}"><b>${x[1]}</b><span>${x[2]}</span></button>`).join("")}</div>
+ <div class="warn">المنصة تشخّص وتُرشد ولا تنفّذ أوامر على هاتفك. لا تساعد في تجاوز FRP أو Activation Lock. المحتوى الحالي نموذج أولي عام ويحتاج مراجعة قبل الاعتماد عليه.</div>`;
+ app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+ const q=document.getElementById("q"),res=document.getElementById("res");
+ q.addEventListener("input",()=>{
+  const t=q.value.trim().toLowerCase();if(!t){res.innerHTML="";return}
+  const hits=KB.map(e=>{const h=(e.t+" "+e.sym+" "+e.steps.join(" ")).toLowerCase();let s=0;t.split(/\s+/).forEach(w=>{if(w&&h.includes(w))s+=e.t.toLowerCase().includes(w)?3:1});return[e,s]}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]||"low mid high".indexOf(a[0].risk)-"low mid high".indexOf(b[0].risk));
+  const cm=CMD.filter(c=>(c.c+" "+c.d).toLowerCase().includes(t));
+  res.innerHTML=(hits.length?hits.map(x=>kbCard(x[0],false)).join(""):"")+(cm.length?`<h3>أوامر مطابقة</h3>`+cm.map(c=>`<pre>${esc(c.c)}</pre>`).join(""):"")+(!hits.length&&!cm.length?`<div class="card">لا يوجد حل موثوق مطابق في القاعدة الحالية. جرّب كلمات أخرى، أو ابدأ التشخيص الذكي، أو راجع <a href="#" data-g="sources">المصادر الرسمية</a>.</div>`:"");
+  bindVotes(res);res.querySelectorAll("[data-g]").forEach(a=>a.onclick=e=>{e.preventDefault();go(a.dataset.g)});
+ });
+},
+diag(){
+ const T={
+ s:{q:"ما المشكلة الأقرب لحالتك؟",o:[["عالق على الشعار أو يعيد التشغيل","b"],["البطارية تنفد أو الهاتف يسخن","p"],["لا إنترنت أو شبكة","n"],["تطبيقات تتوقف أو بطء","a"],["فشل تحديث النظام","u"],["نسيت القفل أو الحساب","c"],["حذفت صورًا أو ملفات","d"],["الكمبيوتر لا يتعرف على الهاتف","k"]]},
+ b:{q:"هل الهاتف مشحون (شحنته نصف ساعة على الأقل) ويستجيب لزر التشغيل؟",o:[["نعم، يضيء ثم يعلق","r:boot"],["لا يضيء أبدًا","r:boot:هذا قد يكون عطلًا مادّيًا في البطارية أو اللوحة، وهو خارج نطاق المنصة. جرّب شاحنًا آخر ثم تواصل مع مركز صيانة معتمد."]]},
+ p:{q:"هل بدأت المشكلة بعد تحديث أو تثبيت تطبيق جديد؟",o:[["نعم","r:batt,slow"],["لا، الهاتف قديم","r:batt:قد تكون البطارية متقادمة. التقدير البرمجي لا يؤكد ذلك، وقد يحتاج الأمر لفحص في مركز معتمد."]]},
+ n:{q:"هل المشكلة في Wi-Fi فقط أم في بيانات الجوال أيضًا؟",o:[["Wi-Fi فقط","r:net:ابدأ بالراوتر وشبكات أخرى للتأكد."],["الاثنان","r:net:جرّب SIM في هاتف آخر لتعرف أين العطل."]]},
+ a:{q:"هل تظهر رسالة «مساحة التخزين ممتلئة»؟",o:[["نعم","r:slow"],["لا","r:slow:انتقل إلى «تحليل السجل» والصق السجل لقراءة الأخطاء."]]},
+ u:{q:"ما نظام جهازك؟",o:[["iPhone","r:upd:استخدم أدوات Apple الرسمية فقط."],["Android","r:upd:تحقق من الطراز والمنطقة قبل أي ملف."]]},
+ c:{q:"هل تتذكر بريد الحساب أو رقم الاسترداد؟",o:[["نعم","r:acct"],["لا","r:acct:جهّز إثبات الشراء وتواصل مع الشركة المصنّعة الرسمية."]]},
+ d:{q:"هل الصور كانت مرفوعة على Google Photos أو iCloud؟",o:[["نعم","r:data"],["لا أعرف","r:data:تحقق من إعدادات النسخ الاحتياطي في حسابك أولًا."]]},
+ k:{q:"هل جربت كابلًا آخر ومنفذًا آخر؟",o:[["نعم ولم ينجح","r:usb"],["لا","r:usb:ابدأ بتبديل الكابل، فهو أشيع سبب."]]}};
+ const st=[];
+ const draw=k=>{
+  const n=T[k];
+  app.innerHTML=`<h2>التشخيص الذكي</h2><p class="sub">قاعدة قواعد داخلية تعمل دون إنترنت. المساعد الذكي الخارجي غير متصل حاليًا (انظر «حالة الميزات»). لا تُدخل كلمات مرور أو رموز تحقق.</p><div class="card"><h3>${n.q}</h3>${n.o.map((o,i)=>`<div class="row"><button class="g" data-i="${i}" style="width:100%;text-align:start">${o[0]}</button></div>`).join("")}${st.length?`<button class="g" id="rs">البدء من جديد</button>`:""}</div>`;
+  app.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{const t=n.o[+b.dataset.i][1];if(t.startsWith("r:")){const [,ids,note]=t.split(":");result(ids.split(","),note)}else{st.push(k);draw(t)}});
+  const r=document.getElementById("rs");if(r)r.onclick=()=>{st.length=0;draw("s")};
+ };
+ const result=(ids,note)=>{
+  app.innerHTML=`<h2>الخطوة التالية الأكثر أمانًا</h2>${note?`<div class="warn">${note}</div>`:""}<p class="sub">جُرّب الخطوات بالترتيب. إن لم تنجح خطوة فانتقل للتي تليها، وتوقف عند «متى تتوقف». لا أرقام نجاح هنا لأنها غير متوفرة.</p>${ids.map((i,x)=>kbCard(KB.find(e=>e.id===i),x===0)).join("")}<div class="row"><button class="b" id="again">تشخيص جديد</button></div>`;
+  bindVotes(app);document.getElementById("again").onclick=()=>{st.length=0;draw("s")};
+ };
+ draw("s");
+},
+kb(){
+ app.innerHTML=`<h2>موسوعة الأعطال والحلول</h2><p class="sub">${KB.length} مداخل عامة (غير مرتبطة بموديل محدد بعد). تصفية حسب الخطورة:</p>
+ <div class="row"><select id="f" aria-label="الخطورة"><option value="">كل المستويات</option><option value="low">منخفضة</option><option value="mid">متوسطة</option><option value="high">عالية</option></select></div><div id="l"></div>`;
+ const f=document.getElementById("f"),l=document.getElementById("l");
+ const r=()=>{l.innerHTML=KB.filter(e=>!f.value||e.risk===f.value).map(e=>kbCard(e,false)).join("")||`<div class="card">لا نتائج.</div>`;bindVotes(l)};f.onchange=r;r();
+},
+cat(k){
+ app.innerHTML=`<h2>${TITLES[k]}</h2><p class="sub">الحلول مرتبة بحيث تبدأ بغير المدمر.</p>${KB.filter(e=>CATS[k].includes(e.cat)).map(e=>kbCard(e,true)).join("")}`;bindVotes(app);
+},
+adb(){
+ app.innerHTML=`<h2>ADB وFastboot</h2><p class="sub">هذه الصفحة <b>تشرح</b> الأوامر فقط. المتصفح لا ينفّذها، ولا يوجد زر هنا يشغّلها. تنفيذها يتم من سطر الأوامر على كمبيوترك.</p>
+ <div class="card"><h3>التثبيت والتجهيز</h3><ol><li>نزّل Platform-Tools من المصدر الرسمي: ${link("pt")}.</li><li>فعّل خيارات المطور وتصحيح USB: ${link("dev")}.</li><li>وصّل الهاتف وكابل بيانات، ووافق على نافذة السماح في الهاتف.</li><li>افتح سطر الأوامر داخل مجلد الأدوات ونفّذ <code>adb devices</code>.</li></ol></div>
+ ${CMD.map(c=>`<div class="card"><pre>${esc(c.c)}</pre><button class="g cp" data-c="${esc(c.c)}">نسخ الأمر</button> <span class="badge ${c.risk}">خطورة ${RS[c.risk]}</span><p>${c.d}</p><p class="hint">المتطلبات: ${c.c.startsWith("fastboot")?"الهاتف في وضع Fastboot وتعريفات USB مثبّتة":"تصحيح USB مفعّل وموافقتك على نافذة الهاتف"} · التوافق: أجهزة Android فقط، ولا ينطبق على iPhone، وقد يختلف السلوك بين الشركات والإصدارات.</p><p class="hint">كيف تفسّر الناتج: ${c.out}</p><p class="hint">المصدر: ${link(c.src)}</p>${c.risk==="high"?`<div class="stop">أمر عالي الخطورة قد يمحو البيانات. لا يُنفَّذ قبل نسخة احتياطية وموافقة صريحة وفهم كامل للتبعات.</div>`:""}</div>`).join("")}
+ <p class="hint">الأوامر قد تختلف أو لا تعمل على بعض الأجهزة والشركات. للصق ناتج أمر وتحليله استخدم «تحليل السجل» أو «مركز الفحص».</p>`;
+ app.querySelectorAll(".cp").forEach(b=>b.onclick=async()=>{const t=b.dataset.c;let ok=false;try{await navigator.clipboard.writeText(t);ok=true}catch(e){const s=document.createElement("textarea");s.value=t;document.body.appendChild(s);s.select();try{ok=document.execCommand("copy")}catch(_){}s.remove()}b.textContent=ok?"تم النسخ":"تعذّر النسخ، انسخه يدويًا";setTimeout(()=>b.textContent="نسخ الأمر",2000)});
+},
+codes(){
+ const LV={verified:"موثّق",unverified:"غير موثّق بعد",sample:"تجريبي"};
+ app.innerHTML=`<h2>أكواد لوحة الاتصال</h2><div class="warn">كل كود موسوم بمستوى توثيقه ومصدره. القائمة قصيرة عمدًا: لا أضيف إلا ما وجدتُ له مصدرًا، ولا أكواد مسح البيانات أو إعادة الضبط لأنها مدمرة وغير موثّقة. لا يوجد كود يعمل على كل الموديلات، وبعضها يظهر قوائم خدمة قد تغيّر إعدادات حساسة.</div>
+ <div class="row"><input type="search" id="cq" placeholder="ابحث: 4636، IMEI، تحويل، Sony" aria-label="بحث في الأكواد"><select id="cr" aria-label="الخطورة"><option value="">كل الخطورة</option><option value="low">منخفضة</option><option value="mid">متوسطة</option><option value="high">عالية</option></select><select id="cv" aria-label="التوثيق"><option value="">كل التوثيق</option><option value="verified">موثّق</option><option value="unverified">غير موثّق بعد</option></select></div><div id="co"></div>
+ <p class="hint">للتحقق الرسمي من IMEI استخدم مشغّل الاتصال أو الشركة المصنّعة. الإضافات تدخل عبر لوحة الإدارة بعد المراجعة.</p>`;
+ const q=document.getElementById("cq"),r=document.getElementById("cr"),v2=document.getElementById("cv"),o=document.getElementById("co");
+ const draw=()=>{const t=q.value.trim().toLowerCase();
+  const L=DB.codes.filter(c=>(!r.value||c.risk===r.value)&&(!v2.value||(c.level||c.confidence)===v2.value)&&(!t||(c.code+" "+c.purpose+" "+(c.cat||"")+" "+(c.compat||"")).toLowerCase().includes(t)));
+  o.innerHTML=L.map(c=>{const lvl=c.level||"unverified";return `<div class="card"><div class="row"><code style="font-size:18px">${esc(c.code)}</code><button class="g cpc" data-c="${esc(c.code)}">نسخ</button><span class="badge ${c.risk}">خطورة ${RS[c.risk]}</span><span class="badge ${lvl==="verified"?"low":"nt"}">${LV[lvl]||esc(lvl)}</span>${c.cat?`<span class="badge nt">${esc(c.cat)}</span>`:""}</div>
+  <p><b>ما الذي يفعله:</b> ${esc(c.purpose)}</p>${c.out?`<p class="hint">النتيجة المتوقعة: ${esc(c.out)}</p>`:""}<p class="hint">التوافق: ${esc(c.compat||"غير محدد")}</p>${c.note?`<div class="warn">${esc(c.note)}</div>`:""}
+  <p class="hint">المصادر: ${c.srcText||(c.srcs&&c.srcs.length?c.srcs.map(link).join("، "):"لا مصدر")} · آخر تحقق: ${c.verified||"لم يتم"}</p></div>`}).join("")||`<div class="card">لا نتائج. لم أجد كودًا موثّقًا يطابق بحثك، ولن أخمّن.</div>`;
+  o.querySelectorAll(".cpc").forEach(b=>b.onclick=async()=>{let ok=false;try{await navigator.clipboard.writeText(b.dataset.c);ok=true}catch(e){}b.textContent=ok?"تم النسخ":"انسخه يدويًا";setTimeout(()=>b.textContent="نسخ",1800)});};
+ [q,r,v2].forEach(x=>x.addEventListener("input",draw));draw();
+},
+logs(){
+ app.innerHTML=`<h2>تحليل السجل</h2><p class="sub">يعمل داخل متصفحك فقط؛ لا يُرسل شيء إلى أي خادم. التحليل بالكلمات المفتاحية وليس ذكاءً اصطناعيًا، والنتائج احتمالات لا أحكام. لا تلصق كلمات مرور أو بيانات شخصية. المحتوى يُعامل كنص غير موثوق ولا يُنفَّذ أبدًا.</p>
+ <div class="card"><label>ارفع ملف .txt أو .log (حتى 2 ميغابايت): <input type="file" id="fl" accept=".txt,.log,text/plain"></label><p><textarea id="ta" rows="7" style="width:100%;font:inherit;direction:ltr;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px" placeholder="أو الصق ناتج logcat / dumpsys هنا"></textarea></p><button class="b" id="an">حلّل</button> <span id="er" class="hint" role="alert"></span></div><div id="out"></div>`;
+ const R=[[/FATAL EXCEPTION/g,"انهيار تطبيق (FATAL EXCEPTION)","مؤكد في السجل أن تطبيقًا انهار. انظر اسم الحزمة بعد السطر. جرّب مسح كاش التطبيق ثم تحديثه."],[/ANR in /g,"تطبيق لا يستجيب (ANR)","غالبًا ثقل أو تعليق؛ سبب مرجّح لا مؤكد."],[/OutOfMemoryError/g,"نفاد الذاكرة","قد يدل على تطبيق مستهلك للذاكرة."],[/low on storage|No space left on device|ENOSPC/gi,"نقص مساحة التخزين","حرّر مساحة ثم أعد المحاولة."],[/avc:\s+denied/g,"رفض صلاحيات SELinux","شائع في السجلات الطبيعية، ولا يدل وحده على عطل."],[/Kernel panic/gi,"Kernel panic","خطأ نظام خطير؛ تواصل مع الدعم الرسمي ولا تفلّش."],[/UnknownHostException|Unable to resolve host/g,"فشل تحليل اسم النطاق (DNS/اتصال)","راجع الاتصال وإعدادات DNS."],[/SIM.*(absent|not ready)/gi,"حالة SIM غير جاهزة","أعد تركيب الشريحة وجرّبها في جهاز آخر."]];
+ const run=txt=>{const out=document.getElementById("out");const found=R.map(r=>[r,(txt.match(r[0])||[]).length]).filter(x=>x[1]);
+  out.innerHTML=found.length?found.map(([r,n])=>`<div class="card"><b>${r[1]}</b><span class="badge nt">${n} مرة</span><p>${r[2]}</p></div>`).join(""):`<div class="card">لم تُطابق أي قاعدة مدعومة في هذا النص (${txt.length} حرف). هذا لا يعني عدم وجود عطل، قاعدة الكلمات صغيرة.</div>`};
+ const er=document.getElementById("er"),ta=document.getElementById("ta");
+ document.getElementById("fl").onchange=e=>{const f=e.target.files[0];er.textContent="";if(!f)return;
+  if(!/\.(txt|log)$/i.test(f.name)||(f.type&&!f.type.startsWith("text/"))){er.textContent="نوع الملف غير مدعوم. المسموح: .txt و.log فقط.";e.target.value="";return}
+  if(f.size>2097152){er.textContent="الملف أكبر من 2 ميغابايت.";e.target.value="";return}
+  const r=new FileReader();r.onload=()=>{ta.value=String(r.result)};r.onerror=()=>{er.textContent="تعذّرت قراءة الملف."};r.readAsText(f)};
+ document.getElementById("an").onclick=()=>{const t=ta.value;if(!t.trim()){er.textContent="لا يوجد نص لتحليله.";return}er.textContent="";run(t.slice(0,2000000))};
+},
+inspect(){
+ const ta="style=\"width:100%;font:inherit;direction:ltr;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px\"";
+ app.innerHTML=`<h2>مركز الفحص</h2><p class="sub">كل الفحوصات هنا تحلّل نصًا تلصقه أنت، داخل متصفحك فقط. المنصة لا تصل إلى هاتفك ولا تفحصه مباشرة.</p>
+ <div class="card"><h3>فحص البطارية من ADB</h3><p class="hint">نفّذ <code>adb shell dumpsys battery</code> على الكمبيوتر والصق الناتج.</p><textarea id="bt" rows="6" ${ta}></textarea><div class="row"><button class="b" id="bb">حلّل البطارية</button></div><div id="bo"></div></div>
+ <div class="card"><h3>مقارنة هوية الهاتف</h3><p class="hint">أدخل القيمة من إعدادات الهاتف ومن ADB (<code>adb shell getprop ro.product.model</code> و<code>ro.build.version.release</code>) لنقارن بينهما.</p>
+ <div class="row"><input id="m1" placeholder="الموديل من الإعدادات"><input id="m2" placeholder="الموديل من ADB" dir="ltr"></div><div class="row"><input id="o1" placeholder="إصدار النظام من الإعدادات"><input id="o2" placeholder="إصدار النظام من ADB" dir="ltr"></div><div class="row"><button class="b" id="ib">قارن</button></div><div id="io"></div></div>
+ <div class="card"><h3>التحقق من IMEI</h3><p>اعرض الرقم بالاتصال بـ <code>*#06#</code> أو من إعدادات «حول الهاتف»، وتحقق منه عبر مشغّل الاتصال أو الشركة المصنّعة الرسمية. المنصة لا تصل إلى قواعد بياناتهم ولا تطلب منك إدخال الرقم هنا. لا تنشره علنًا.</p></div>
+ <div class="card"><h3>الفحص الأمني</h3><div class="warn">لا يمكن لهذه الصفحة اكتشاف البرمجيات الخبيثة. ما تقدمه قائمة مراجعة يدوية فقط، وليست نتيجة فحص.</div><ul><li>راجع في إعدادات الهاتف التطبيقات التي تطلب صلاحيات لا تحتاجها (الكاميرا، الميكروفون، الرسائل، الموقع).</li><li>احذف تطبيقات لا تعرفها أو ثبّتها من خارج المتجر الرسمي.</li><li>فعّل حماية المتجر الرسمي وحدّث النظام.</li><li>إن ظهرت إعلانات غريبة أو استهلاك غير مبرر أو تطبيقات لم تثبّتها، فكّر في نسخ احتياطي ثم تواصل مع الدعم الرسمي.</li></ul></div>`;
+ const P=(t,k)=>{const m=t.match(new RegExp("^\\s*"+k+":\\s*(\\S+)","mi"));return m?m[1]:null};
+ document.getElementById("bb").onclick=()=>{const t=document.getElementById("bt").value.slice(0,200000),bo=document.getElementById("bo");
+  const L=P(t,"level"),T=P(t,"temperature"),H=P(t,"health"),S=P(t,"status");
+  if(!L&&!T&&!H&&!S){bo.innerHTML=`<div class="warn">لم أجد حقول level أو temperature أو health أو status. تأكد من لصق ناتج الأمر كاملًا.</div>`;return}
+  const HM={1:"غير معروفة",2:"جيدة",3:"سخونة زائدة",4:"تالفة",5:"جهد زائد",6:"عطل غير محدد",7:"باردة"},SM={1:"غير معروف",2:"يشحن",3:"يفرغ",4:"لا يشحن",5:"ممتلئ"};
+  const tc=T&&isFinite(+T)?(+T/10):null,rows=[];
+  if(L&&isFinite(+L))rows.push(["مستوى الشحن",esc(L)+"%"]);
+  if(tc!==null)rows.push(["الحرارة",tc.toFixed(1)+" °م (النظام يبلغ عنها بعُشر الدرجة)"]);
+  if(H)rows.push(["الحالة المبلّغ عنها",HM[H]||"رمز "+esc(H)]);
+  if(S)rows.push(["حالة الشحن",SM[S]||"رمز "+esc(S)]);
+  let n="";
+  if(tc!==null&&tc>=45)n+=`<div class="stop">الحرارة مرتفعة (حد إرشادي تقريبي وليس رسميًا): افصل الشاحن وأوقف الاستخدام الثقيل. إن استمرت فتواصل مع مركز معتمد.</div>`;
+  if(H&&H!=="2")n+=`<div class="warn">النظام يبلغ عن حالة غير «جيدة». هذا مؤشر يستحق المراجعة وليس تشخيصًا نهائيًا.</div>`;
+  bo.innerHTML=`<table>${rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table>${n}<p class="hint">حد التحليل: هذا الناتج لا يتضمن سعة البطارية الفعلية، فلا أستطيع تقدير «صحة البطارية» منه، وبعض الأجهزة لا تعرض كل الحقول.</p>`};
+ document.getElementById("ib").onclick=()=>{const g=i=>document.getElementById(i).value.trim(),nz=s=>s.toLowerCase().replace(/[\s\-_]/g,""),io=document.getElementById("io");
+  const out=[["الموديل",g("m1"),g("m2")],["إصدار النظام",g("o1"),g("o2")]].filter(x=>x[1]||x[2]).map(([l,a,b])=>!a||!b?`<li>${l}: أدخلت طرفًا واحدًا فقط فلا مقارنة.</li>`:nz(a)===nz(b)?`<li>${l}: متطابق.</li>`:`<li>${l}: يوجد اختلاف بين «${esc(a)}» و«${esc(b)}». هذا شائع (الاسم التجاري يختلف عن رقم الطراز، أو الأداة تعرض بصيغة أخرى، أو حدث تحديث) ولا يكفي وحده للحكم على شيء.</li>`);
+  io.innerHTML=out.length?`<ul>${out.join("")}</ul>`:`<div class="warn">أدخل قيمة واحدة على الأقل.</div>`};
+},
+devices(){
+ const verifiedCount=DB.models.filter(m=>m.data_level==="verified").length;
+ app.innerHTML=`<h2>موسوعة الأجهزة والموديلات</h2><div class="warn">${SERVER.on?"البيانات التالية من قاعدة الخادم. سجلات العائلات الأولية لا تكفي لاختيار Firmware؛ طابق رقم الطراز والمنطقة وإصدار النظام من المصدر الرسمي.":"وضع مستقل ببيانات مضمّنة محليًا؛ لن نعرض عائلة جهاز على أنها طراز إقليمي موثّق."}</div>
+ <p class="sub">الشركات: ${DB.brands.length} · السجلات المنشورة: ${DB.models.length} · السجلات المعلّمة موثّقة: ${verifiedCount}</p>
+ <table><tr><th>الشركة</th><th>السجلات المنشورة</th><th>الموثّق</th></tr>${DB.brands.map(b=>`<tr><td>${esc(b)}</td><td>${DB.models.filter(m=>m.brand===b).length}</td><td>${DB.models.filter(m=>m.brand===b&&m.data_level==="verified").length}</td></tr>`).join("")}</table>
+ <h3>حقول السجل المقترحة</h3><pre>{ brand, name, model_number, os_versions, region, notes, source_ids, last_verified, data_level }</pre>
+ ${DB.models.length?`<h3>السجلات المنشورة</h3><ul>${DB.models.map(m=>`<li>${esc(m.brand||"")} ${esc(m.name||"")} ${esc(m.model_number||"")} <span class="badge nt">${esc(m.data_level||"unverified")}</span></li>`).join("")}</ul>`:"<p>لا توجد سجلات منشورة حتى الآن.</p>"}<p class="hint">${SERVER.on?"الإضافة عبر لوحة الإدارة (/admin).":"وضع مستقل بلا خادم: الإضافة تتطلب تشغيل الخادم."}</p>`;
+},
+academy(){
+ const L=["أساسيات أنظمة الهواتف","قراءة رسائل الخطأ","تثبيت تعريفات USB","أساسيات ADB","أساسيات Fastboot","تحليل سجلات النظام","تشخيص البطارية والشبكة","التحديث والاستعادة","حماية البيانات","استعادة الحسابات بطرق رسمية"];
+ app.innerHTML=`<h2>الأكاديمية</h2><p class="sub">المسارات مخطّطة. دروسها غير مكتوبة بعد، عدا درس البداية.</p>
+ <details open><summary>درس: ما الفرق بين الخطوات الآمنة والمدمرة؟</summary><p>الخطوة الآمنة تقرأ المعلومات أو تغيّر إعدادًا يمكن إرجاعه (مثل إعادة تشغيل). الخطوة المدمرة تمحو البيانات أو تغيّر حالة الجهاز بشكل يصعب عكسه (مثل إعادة ضبط المصنع أو فتح Bootloader). نبدأ دائمًا بالأولى.</p>
+ <p><b>اختبار قصير:</b> أيهما تفعل أولًا عند Bootloop؟</p><div class="row"><button class="g q" data-a="0">إعادة ضبط المصنع</button><button class="g q" data-a="1">الشحن وإزالة SIM والملحقات</button></div><p id="qa" role="status"></p></details>
+ <h3>المسارات المخطّطة</h3><ul>${L.map(x=>`<li>${x} <span class="badge nt">قريبًا</span></li>`).join("")}</ul>`;
+ app.querySelectorAll(".q").forEach(b=>b.onclick=()=>{document.getElementById("qa").textContent=b.dataset.a==="1"?"صحيح: نبدأ بما لا يمحو البيانات.":"ليس الآن؛ إعادة الضبط تمحو البيانات وهي الخيار الأخير."});
+},
+sources(){
+ app.innerHTML=`<h2>المصادر والمراجع</h2><p class="sub">روابط رسمية فقط. تحقق من فتحها بنفسك قبل الاعتماد.</p><ul>${Object.keys(SRC).map(k=>`<li>${link(k)}</li>`).join("")}</ul><p class="hint">لا نستضيف ملفات Firmware ولا نوفّر روابط تنزيل غير رسمية.</p>`;
+},
+privacy(){
+ app.innerHTML=`<h2>الخصوصية</h2><ul><li>لا حسابات ولا تسجيل دخول.</li><li>لا يُحفظ سجل تشخيص بعد إغلاق الصفحة، ولا ملف شخصي.</li><li>تحليل السجل والتشخيص يتمان داخل متصفحك ولا يُرسلان إلى أي خدمة.</li><li>التقييمات تُحفظ في ذاكرة الصفحة فقط حاليًا.</li><li>لا نطلب كلمات مرور أو رموز تحقق أو مفاتيح استرداد. لا تدخلها هنا.</li><li>إذا كان المساعد الذكي مهيأ، فإن النص الذي ترسله بعد الموافقة يمر عبر خادم المنصة إلى مزوّد خارجي؛ لا تكتب كلمات مرور أو رموز تحقق أو بيانات شخصية.</li></ul>`;
+},
+status(){
+ const Y=[["وضع التشغيل",SERVER.on?("متصل بالخادم"+(SERVER.ai?"، والمساعد الذكي مهيأ":"، والمساعد الذكي غير مهيأ")):"مستقل بلا خادم (لا مساعد ذكي ولا لوحة إدارة)"],["نسخ أوامر ADB، تحليل ناتج dumpsys battery، مقارنة بيانات الهوية، قراءة البيانات عبر طبقة DB منفصلة","يعمل في المتصفح"],["التنقل، البحث في المحتوى الحالي، الفلاتر حسب الخطورة","يعمل"],["التشخيص التدريجي بالقواعد الداخلية","يعمل (محتوى أولي)"],["تحليل السجل بالكلمات المفتاحية مع فحص النوع والحجم","يعمل في المتصفح"],["التقييم مفيد/غير مفيد","يعمل مؤقتًا في الذاكرة فقط"],["مساعد الذكاء الاصطناعي النصي",SERVER.ai?"مهيأ؛ يعتمد نجاحه على صحة مفتاح الخدمة واسم النموذج والاتصال":"غير مهيأ؛ التشخيص المحلي يعمل. تحليل الصور غير مدعوم"],["لوحة الإدارة والمصادقة والمراجعة البشرية",SERVER.on?"الخادم متصل؛ افتح /admin وسجّل الدخول":"غير مفعّلة في الوضع المستقل؛ تحتاج الخادم"],["قاعدة الموديلات والأكواد","موديلات منشورة: "+DB.models.length+"؛ الموثّق: "+DB.models.filter(m=>m.data_level==="verified").length+"؛ الأكواد: "+DB.codes.length],["PWA والعمل دون اتصال", "Service Worker وmanifest متاحان عبر HTTPS؛ التخزين المؤقت يقتصر على غلاف التطبيق"],["تنفيذ ADB/Fastboot","غير ممكن من المتصفح: يلزم برنامج محلي موثوق"],["تحديث المعرفة من المصادر","غير مفعّل: يحتاج خدمة مجدولة وموافقة بشرية قبل النشر"]];
+ app.innerHTML=`<h2>حالة الميزات</h2><p class="sub">ما يعمل فعليًا وما ينتظر تكاملًا.</p><table>${Y.map(y=>`<tr><td>${y[0]}</td><td>${y[1]}</td></tr>`).join("")}</table><p class="hint">حالة الخادم لا تثبت سلامة كل ميزة؛ لم يُختبر المحتوى على كل الأجهزة، ولا ينفذ المتصفح أوامر ADB مباشرة.</p>`;
+},
+admin(){
+ app.innerHTML=`<h2>لوحة الإدارة</h2>${SERVER.on?`<p>خادم الإدارة متصل. افتح لوحة الإدارة الآمنة لإدارة المحتوى والمستخدمين ومراجعة الاقتراحات.</p><p><a class="b" href="/admin/">فتح لوحة الإدارة</a></p>`:`<div class="warn">لوحة الإدارة تحتاج تشغيل خادم Node.js وقاعدة البيانات؛ وهي غير متاحة في وضع الصفحة المستقلة.</div>`}<p class="hint">لا تدخل بيانات تسجيل الدخول في صفحات غير نطاق مشروعك، ولا تشارك كلمة المرور أو مفاتيح الخدمة.</p>`;
+}};
+show((location.hash||"#home").slice(1));
+/* ===== وضع الخادم (اختياري): يعمل المشروع بدونه ===== */
+function aiPanel(){
+ const w=document.getElementById("aiwrap");
+ w.innerHTML=`<div class="card"><h3>اسأل المساعد الذكي (اختياري)</h3><div class="warn">سيُرسل ما تكتبه إلى خدمة ذكاء اصطناعي خارجية عبر خادم المنصة. لا تكتب كلمات مرور أو رموز تحقق أو بيانات شخصية. الردود آلية وقد تخطئ.</div>
+ <div class="row"><input id="ab" placeholder="الشركة (اختياري)"><input id="am" placeholder="الموديل (اختياري)"><input id="ao" placeholder="إصدار النظام (اختياري)"></div>
+ <textarea id="at" rows="4" maxlength="2000" style="width:100%;font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px" placeholder="صف المشكلة ونتائج ما جربته"></textarea>
+ <label class="row"><input type="checkbox" id="ac"> أوافق على إرسال هذا النص إلى خدمة الذكاء الاصطناعي</label>
+ <div class="row"><button class="b" id="as">أرسل</button><span id="ae" class="hint" role="status"></span></div><div id="ar" class="card" hidden style="white-space:pre-wrap"></div></div>`;
+ document.getElementById("as").onclick=async()=>{const e=document.getElementById("ae"),r=document.getElementById("ar");e.textContent="جارٍ الإرسال...";r.hidden=true;
+  try{const x=await fetch("/api/assistant",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({message:document.getElementById("at").value,brand:document.getElementById("ab").value,model:document.getElementById("am").value,os:document.getElementById("ao").value,consent:document.getElementById("ac").checked})});
+   const d=await x.json();if(!x.ok){e.textContent=d.error||"تعذّر الطلب";return}
+   e.textContent=d.note||"";r.textContent=d.answer;r.hidden=false;}catch(_){e.textContent="تعذّر الاتصال بالخادم. التشخيص المحلي ما زال متاحًا."}};
+}
+(async()=>{
+ if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("/sw.js").catch(()=>{});
+ try{
+  const h=await fetch("/api/health");if(!h.ok)return;const hj=await h.json();SERVER.on=true;SERVER.ai=!!hj.ai;
+  const d=await (await fetch("/api/data")).json();
+  const lv={sample:"بيانات تجريبية",unverified:"غير موثّق بعد",verified:"موثّق"};
+  const srcs=Object.fromEntries((d.sources||[]).map(x=>[String(x.id),x]));
+  DB.brands=(d.brands||[]).map(x=>x.name).filter(Boolean);
+  DB.models=(d.models||[]);
+  DB.codes=(d.codes||[]).map(c=>({code:c.code,purpose:c.purpose,cat:c.category,out:c.expected_output,note:c.notes,level:c.data_level,compat:c.compat||"غير محدد",risk:RS[c.risk]?c.risk:"mid",verified:c.last_verified,
+   srcText:esc(lv[c.data_level]||c.data_level)+(c.source_ids?" · "+c.source_ids.split(",").map(i=>srcs[i]?link2(srcs[i]):"").filter(Boolean).join("، "):"")}));
+  // عند وجود الخادم تصبح قاعدة البيانات هي مصدر الحقيقة لجميع الأقسام الديناميكية.
+  CMD.splice(0,CMD.length,...(d.commands||[]).map(c=>({c:c.command,d:c.purpose,risk:RS[c.risk]?c.risk:"mid",out:c.expected_output||"لا توجد نتيجة متوقعة مسجلة.",src:(c.command||"").startsWith("fastboot")?"pt":"adb",requirements:c.requirements,compat:c.compat,notes:c.notes})));
+  const categoryOf=x=>{const z=((x.title||"")+" "+(x.symptoms||"")).toLowerCase();return /بطاري|حرار|شحن/.test(z)?"battery":/شبك|wi.?fi|اتصال|بيانات الجوال/.test(z)?"network":/تحديث|update/.test(z)?"update":/شعار|إقلاع|إقلاع|reboot|bootloop/.test(z)?"boot":/حساب|قفل|استرداد/.test(z)?"account":/صور|ملفات|محذوف|استعادة بيانات/.test(z)?"data":"apps"};
+  KB.splice(0,KB.length,...(d.issues||[]).map(x=>({id:String(x.id),t:x.title,cat:categoryOf(x),risk:RS[x.risk]?x.risk:"mid",loss:"راجع التحذير قبل أي خطوة قد تمس البيانات",sym:x.symptoms||"",tools:"راجع تعليمات الشركة الرسمية",pc:"قد يلزم",steps:String(x.steps||"").split(/\s*\d+[.)]\s*/).map(y=>y.trim()).filter(Boolean),stop:x.stop_when||"توقف إذا كان هناك خطر على البيانات أو سلامة الجهاز.",src:[],brand:x.brand,os_versions:x.os_versions,data_level:x.data_level})));
+  if(SERVER.ai)aiPanel();
+  show((location.hash||"#home").slice(1));
+ }catch(_){/* لا خادم: نبقى في الوضع المستقل */}
+})();
+function link2(s){return /^https:\/\//.test(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>`:""}
+
+</script>
+</body>
+</html>
